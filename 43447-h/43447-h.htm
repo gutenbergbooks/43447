@@ -1,0 +1,1227 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+    'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .no-italics { font-style: normal }
+
+  .bold       { font-weight: bold }
+  .no-bold    { font-weight: normal }
+
+  .small-caps { } /* Epub needs italics */
+  .gesperrt   { } /* Epub needs italics */
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .justify    { text-align: justify }
+  .center     { text-align: center; text-indent: 0 }
+  .centerleft { text-align: center; text-indent: 0 }
+  .right      { text-align: right;  text-indent: 0 }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 0; 
+              text-indent: 2em }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-after:  avoid }
+
+  .container, .title, .subtitle, #pg-header            
+                      { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.pfirst, p.noindent { 
+    text-indent: 0 
+  }
+
+  .boxed         { border: 1px solid black; padding: 1em }
+  .topic, .note  { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section    { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils          { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+  div.transition       { margin: 1.5em 0 }
+
+  .vfill, .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                        { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1    { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2    { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3    { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4    { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5    { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.title, p.subtitle.level-1,
+  h2.title, p.subtitle.level-2    { text-align: center }
+
+  #pg-header,
+  h1.document-title               { margin: 10% 0 5% 0 }
+  p.document-subtitle             { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  .attribution            { margin-top: 1.5em }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em   10% }
+  div.image    { margin: 1.5em  0  }
+  div.caption  { margin: 1.5em  0 }
+  div.legend   { margin: 1.5em  0 }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin-top: 3em; margin-bottom: 3em }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title, p.admonition-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+
+  table.table.hrules-table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table.hrules-table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table.hrules-rows  tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table.hrules-rows  tr.last        { border-width: 0 }
+  table.table.hrules-rows  td, 
+  table.table.hrules-rows  th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table tr             { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 0.5ex 1em }
+  table.table tr.first td    { padding-top: 1ex }
+  table.table tr.last td     { padding-bottom: 1ex }
+  table.table tr.first th    { padding-top: 1ex }
+  table.table tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  div.footnote-group          { margin: 1em 0 }
+  table.footnote td.label     { width: 2em; text-align: right; padding-left: 0 }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  /* em                { font-style: normal }
+  strong            { font-weight: normal } */
+
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important; 
+                    text-indent: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { float: left; margin: 0 0.5em 0 0; max-width: 25% }
+  span.dropspan     { font-variant: small-caps }
+
+  .no-page-break    { page-break-before: avoid !important }
+
+  /* PAGINATION */
+
+  .pageno           { position: absolute; right: 95%; font: medium sans-serif; text-indent: 0 }
+  .pageno:after     { color: gray; content: '[' attr(title) ']' }
+  .lineno           { position: absolute; left:  95%; font: medium sans-serif; text-indent: 0 }
+  .lineno:after     { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref      { float: right }
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, .dedication, .plainpage
+                       { margin: 10% 0; }
+
+   div.clearpage, div.cleardoublepage
+                       { margin: 10% 0; border: none; border-top: 1px solid gray; }
+
+   .vfill              { margin:  5% 10% }
+  }
+
+  @media print {
+   div.clearpage       { page-break-before: always; padding-top: 10% }
+   div.cleardoublepage { page-break-before: right;  padding-top: 10%  }
+
+   .vfill              { margin-top: 20% }
+   h2.title            { margin-top: 20% }
+  }
+
+  /* DIV */
+  pre               { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+
+  /*]]>*/
+  </style>
+  <title>THE TALE OF REDDY WOODPECKER</title>
+</head>
+<body>
+  <div class="document" id="the-tale-of-reddy-woodpecker">
+    <h1 class="center document-title level-1 pfirst title"><span class="x-large">THE TALE OF REDDY WOODPECKER</span></h1><!-- this is the default PG-RST stylesheet -->
+    <!-- figure and image styles for non-image formats -->
+    <!-- default transition -->
+    <!-- default attribution -->
+    <!-- -*- encoding: utf-8 -*- -->
+    <div class="clearpage"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="align-None container frontispiece">
+      <div class="vspace" style="height: 4em"></div>
+      <div class="align-center auto-scaled figure margin" style="width: 59%" id="figure-46">
+        <img class="align-center block" style="display: block; width: 100%" alt="Reddy Woodpecker Meets Mr. Flicker. *The Tale of Reddy Woodpecker*. *Frontispiece*—(*Page* 22)" src="images/img-front.jpg" />
+        <div class="caption centerleft figure-caption margin">
+          <span class="italics">Reddy Woodpecker Meets Mr. Flicker.</span> <em class="italics">The Tale of Reddy Woodpecker</em><span class="italics">.</span> <em class="italics">Frontispiece</em><span class="italics">—(</span><em class="italics">Page</em> <a class="italics reference internal" href="#id1">22</a><span class="italics">)</span>
+        </div>
+      </div>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <div class="align-None container titlepage">
+      <p class="center pfirst"><em class="italics medium">TUCK-ME-IN TALES</em></p>
+      <p class="center pnext"><span class="small">(Trademark Registered)</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="x-large">THE TALE OF<br />
+      REDDY WOODPECKER</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="medium">BY<br />
+      ARTHUR SCOTT BAILEY</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="small">Author of<br />
+      "SLEEPY-TIME TALES"<br />
+      (Trademark Registered)<br />
+      and<br />
+      "SLUMBER-TOWN TALES"<br />
+      (Trademark Registered)</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="medium">ILLUSTRATED BY<br />
+      HARRY L. SMITH</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="medium">NEW YORK<br />
+      GROSSET &amp; DUNLAP<br />
+      PUBLISHERS</span></p>
+      <p class="center pnext"><span class="small">Made in the United States of America</span></p>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <div class="align-None container verso">
+      <p class="center pfirst"><span class="small">COPYRIGHT, 1922, BY<br />
+      GROSSET &amp; DUNLAP</span></p>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <p class="center pfirst"><span class="bold large">CONTENTS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="noindent pfirst"><span class="small">CHAPTER</span></p>
+    <p class="noindent pnext"><span>I</span> <a class="reference internal" href="#mrs-robin-s-news">Mrs. Robin's News</a> <span><br />
+    II</span> <a class="reference internal" href="#getting-acquainted">Getting Acquainted</a> <span><br />
+    III</span> <a class="reference internal" href="#morning-tattoos">Morning Tattoos</a> <span><br />
+    IV</span> <a class="reference internal" href="#the-high-hole">The High-Hole</a> <span><br />
+    V</span> <a class="reference internal" href="#too-much-cousin">Too Much Cousin</a> <span><br />
+    VI</span> <a class="reference internal" href="#mr-flicker-s-plans">Mr. Flicker's Plans</a> <span><br />
+    VII</span> <a class="reference internal" href="#the-two-neighbors">The Two Neighbors</a> <span><br />
+    VIII</span> <a class="reference internal" href="#an-early-call">An Early Call</a> <span><br />
+    IX</span> <a class="reference internal" href="#mrs-robin-worries">Mrs. Robin Worries</a> <span><br />
+    X</span> <a class="reference internal" href="#obeying-orders">Obeying Orders</a> <span><br />
+    XI</span> <a class="reference internal" href="#a-very-short-fight">A Very Short Fight</a> <span><br />
+    XII</span> <a class="reference internal" href="#jolly-robin-s-helper">Jolly Robin's Helper</a> <span><br />
+    XIII</span> <a class="reference internal" href="#the-carpenter">The Carpenter</a> <span><br />
+    XIV</span> <a class="reference internal" href="#mr-crow-s-questions">Mr. Crow's Questions</a> <span><br />
+    XV</span> <a class="reference internal" href="#the-redcaps">The Redcaps</a> <span><br />
+    XVI</span> <a class="reference internal" href="#a-sly-trick">A Sly Trick</a> <span><br />
+    XVII</span> <a class="reference internal" href="#a-hunting-party">A Hunting Party</a> <span><br />
+    XVIII</span> <a class="reference internal" href="#a-big-appetite">A Big Appetite</a> <span><br />
+    XIX</span> <a class="reference internal" href="#who-was-greedy">Who Was Greedy?</a> <span><br />
+    XX</span> <a class="reference internal" href="#catching-flies">Catching Flies</a> <span><br />
+    XXI</span> <a class="reference internal" href="#the-odd-mr-frog">The Odd Mr. Frog</a> <span><br />
+    XXII</span> <a class="reference internal" href="#dodging-danger">Dodging Danger</a> <span><br />
+    XXIII</span> <a class="reference internal" href="#beechnuts">Beechnuts</a> <span><br />
+    XXIV</span> <a class="reference internal" href="#the-winter-s-store">The Winter's Store</a></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="mrs-robin-s-news"><span class="bold x-large">THE TALE OF<br />
+    REDDY WOODPECKER</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">I</span></p>
+    <p class="center pnext"><span class="bold large">MRS. ROBIN'S NEWS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>If you had been in Farmer Green's door-yard on a certain day in May you would have heard an unusual twittering and chirping and squawking.</span></p>
+    <p class="pnext"><span>Now, there was a reason for all this chatter. Jolly Robin's wife had seen a handsome stranger in the orchard. And she had hurried away to spread the news among her friends.</span></p>
+    <p class="pnext"><span>"He's a dashing person, very elegantly dressed," Mrs. Robin told everybody.</span></p>
+    <p class="pnext"><span>That remark did not seem to please the good lady's husband. For Jolly Robin turned up his nose—or his bill—slightly, and he said to his wife, "The question is: What are his manners like?"</span></p>
+    <p class="pnext"><span>Mrs. Robin admitted that the stranger's manners were not all that one might wish.</span></p>
+    <p class="pnext"><span>"He was somewhat noisy," she explained. "And I fear he may be quarrelsome. But his clothes certainly were beautiful."</span></p>
+    <p class="pnext"><span>Jasper Jay, who was something of a dandy, wanted to know exactly what the stranger wore. He said he doubted that the newcomer was as fashionable as Mrs. Robin supposed.</span></p>
+    <p class="pnext"><span>"I can't tell you much about his suit," Mrs. Robin went on, "except that it was new and stylish. What I noticed specially was his cap. It was a big one and it was a brilliant red."</span></p>
+    <p class="pnext"><span>Jasper Jay sniffed when he heard that.</span></p>
+    <p class="pnext"><span>"They're not wearing red caps this season," he declared. He flew off then, to find his cousin Mr. Crow and tell him the news. For he hoped that Mr. Crow would give the stranger a disagreeable greeting. Jasper Jay did not like other birds to be more gayly dressed than he.</span></p>
+    <p class="pnext"><span>While all the feathered folk in the neighborhood were wondering who the stranger could be old Mr. Crow came winging over from the edge of the woods.</span></p>
+    <p class="pnext"><span>"Where is he?" he squalled. "Let me have one look at this new arrival! I think I know who he is."</span></p>
+    <p class="pnext"><span>A little later Mr. Crow had his look, over in the orchard. Then he came back and alighted in the tall grass behind the farmhouse.</span></p>
+    <p class="pnext"><span>"He's a Red-headed Woodpecker," Mr. Crow announced with a wise tilt of his own head. "There hasn't been one of his kind in Pleasant Valley for years and years.... It's a pity," he added, "that this one has stopped here."</span></p>
+    <p class="pnext"><span>The old gentleman's words threw little Mrs. Chippy into a flutter.</span></p>
+    <p class="pnext"><span>"Is he a dangerous person?" she quavered.</span></p>
+    <p class="pnext"><span>"I believe so," said Mr. Crow darkly.</span></p>
+    <p class="pnext"><span>"Does he eat eggs?" Mrs. Chippy faltered. "And nestlings?"</span></p>
+    <p class="pnext"><span>For a moment or two old Mr. Crow couldn't make up his mind whether he ought to get angry or not. Eating eggs and young birds was a subject he liked to avoid. He was aware that his neighbors knew he was a rascal. But he was a quick-witted old fellow. Suddenly he saw how the presence of this stranger might help him.</span></p>
+    <p class="pnext"><span>"Yes!" he told Mrs. Chippy. "This Woodpecker family all eat eggs and nestlings. And if you people miss any of your treasures, later, you'll know who took them."</span></p>
+    <p class="pnext"><span>At that little Mr. Chippy nodded his chestnut-crowned head.</span></p>
+    <p class="pnext"><span>"If it isn't you," he remarked to Mr. Crow, "then it will be the stranger."</span></p>
+    <p class="pnext"><span>"Not at all! Not at all!" the old gentleman squawked. "You'll be safe in thinking the newcomer guilty." Then he turned his back on Mr. Chippy, as if that small, shrinking chap weren't worth noticing. And favoring Mrs. Chippy with what he thought was a pleasant smile, Mr. Crow said to her, "You mustn't let this Red-head know where your nest is. No doubt you have eggs in it already."</span></p>
+    <p class="pnext"><span>"Yes, I have!" she twittered proudly.</span></p>
+    <p class="pnext"><span>"I certainly hope Red-head won't steal them," said Mr. Crow. "It would be a shame if you lost your beautiful eggs.... Where is your nest, Mrs. Chippy?"</span></p>
+    <p class="pnext"><span>"Don't tell him!" peeped Mr. Chippy to his wife. "He wants to eat our eggs himself."</span></p>
+    <p class="pnext"><span>As for Mr. Crow, he gave a hoarse cry of rage, before he flapped himself away.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="getting-acquainted"><span class="bold large">II</span></p>
+    <p class="center pnext"><span class="bold large">GETTING ACQUAINTED</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>"I don't believe—" said Mrs. Jolly Robin after old Mr. Crow had flown off in a rage—"I don't believe this Mr. Woodpecker can be such a bad person as Mr. Crow thinks. He certainly wears very stylish clothes and a very handsome red cap."</span></p>
+    <p class="pnext"><span>"Clothes—" said little Mr. Chippy severely—"clothes don't tell whether their wearer has a taste for eggs. Now, I wear a red cap. To be sure, it isn't as bright, perhaps, nor as big, as Mr. Woodpecker's. But it's a red cap, all the same. And everybody knows that</span> <em class="italics">I</em> <span>don't eat eggs. Everybody knows I'm no nest robber."</span></p>
+    <p class="pnext"><span>"You don't look like one!" cried a strange voice which made everybody jump. It was the newcomer, Mr. Woodpecker, himself! Unnoticed he had flown up. And now he perched on a limb nearby. "You don't look any more like a nest robber than I do," he told Mr. Chippy.</span></p>
+    <p class="pnext"><span>The whole company stared at him; and then stared at little Mr. Chippy. There was a vast difference between them. Mr. Chippy was a tiny, meek person, while Mr. Woodpecker was as bold as brass. Mr. Chippy was modestly dressed; and his cap, though it was reddish, was of a dull hue. But the newcomer wore a flashy suit of dark steel blue and white; and his cap was both very big and very red. Mr. Chippy was a shy body who said little; and when he did speak it was usually only to utter a faint</span> <em class="italics">chip, chip, chip, chip</em><span>. But Mr. Woodpecker was very talkative. When he spoke you didn't have to strain your ears to hear what he said.</span></p>
+    <p class="pnext"><span>Mr. Woodpecker gave a quick glance all about and cried, "How-dy do!"</span></p>
+    <p class="pnext"><span>"Good morning, Mr. Woodpecker!" the birds greeted him.</span></p>
+    <p class="pnext"><span>"Don't call me 'Mister!'" he said. "My name is Reddy—Reddy Woodpecker." Then he turned to little, shrinking Mr. Chippy and his wife. "I can see that you're worried about your eggs," he remarked. "I suppose your nest is hidden not far away."</span></p>
+    <p class="pnext"><span>Mr. and Mrs. Chippy looked most uncomfortable. They didn't quite dare speak to such a grand person as Reddy.</span></p>
+    <p class="pnext"><span>"Where's your nest?" Reddy asked them bluntly.</span></p>
+    <p class="pnext"><span>"</span><em class="italics">Chip, chip, chip, chip!</em><span>" said Mr. Chippy. "</span><em class="italics">Chip, chip, chip, chip!</em><span>" said his wife.</span></p>
+    <p class="pnext"><span>"What sort of answer is that to a civil question?" Reddy Woodpecker blustered. "Here I've just made your acquaintance. And I've asked you to call me by my first name. And you won't even tell me where you live!"</span></p>
+    <p class="pnext"><span>Mr. and Mrs. Chippy didn't know what to say. It was lucky for them that Mr. Catbird came to their rescue.</span></p>
+    <p class="pnext"><span>"Don't bully these good people!" Mr. Catbird cried, as he settled himself right in front of Reddy Woodpecker. "If you had heard what old Mr. Crow said about you, just before you arrived, you'd understand why Mr. and Mrs. Chippy don't care to tell you where their nest is."</span></p>
+    <p class="pnext"><span>Reddy glared at Mr. Catbird.</span></p>
+    <p class="pnext"><span>"Old Mr. Crow? Who's he?" Reddy demanded. "I haven't made his acquaintance. I'm sure he can't know anything about me."</span></p>
+    <p class="pnext"><span>"Ah! Perhaps not!" Mr. Catbird answered. "But he knows what sort of family yours is. He has met others like you."</span></p>
+    <p class="pnext"><span>Reddy sniffed. "I never saw a Crow that wasn't a rascally blackguard," he snapped. "There never was a Crow that wasn't a nest robber."</span></p>
+    <p class="pnext"><span>"</span><em class="italics">Chip, chip, chip, chip!</em><span>" Mr. Chippy interrupted.</span></p>
+    <p class="pnext"><span>"What's he saying?" Reddy Woodpecker asked Mr. Catbird.</span></p>
+    <p class="pnext"><span>"He says he agrees with you."</span></p>
+    <p class="pnext"><span>"Then he has more sense than I thought," Reddy observed. "And if Mr. Crow spoke ill of me I hope Mr. Chippy has enough sense not to believe him."</span></p>
+    <p class="pnext"><span>"</span><em class="italics">Chip, chip, chip, chip!</em><span>"</span></p>
+    <p class="pnext"><span>"What's he saying now?" Reddy Woodpecker demanded of Mr. Catbird.</span></p>
+    <p class="pnext"><span>"He says he agrees with Mr. Crow," Mr. Catbird explained very pleasantly.</span></p>
+    <p class="pnext"><span>"Then he hasn't any sense at all!" cried Reddy.</span></p>
+    <p class="pnext"><span>The whole company couldn't help giggling when he said that. And Reddy Woodpecker promptly lost his temper.</span></p>
+    <p class="pnext"><span>"I've planned to spend the summer here," he said. "It's too late now to move on. But I can understand at last why none of my family has visited this neighborhood for many years. It's a pleasant enough place. But the neighbors aren't my sort at all."</span></p>
+    <p class="pnext"><span>"</span><em class="italics">Chip, chip, chip, chip!</em><span>" piped Mr. Chippy.</span></p>
+    <p class="pnext"><span>"He says he agrees with you," Mr. Catbird told Reddy Woodpecker. And then he added, "Meaow!" And he gave himself a jerk and spread his tail, all of which told Reddy Woodpecker plainly that Mr. Catbird had a very poor opinion of him.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="morning-tattoos"><span class="bold large">III</span></p>
+    <p class="center pnext"><span class="bold large">MORNING TATTOOS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>In the spring Reddy Woodpecker liked to drum.</span></p>
+    <p class="pnext"><span>He never felt that a pleasant day was rightly begun unless he played a tattoo early in the morning. So upon his arrival in Pleasant Valley he began promptly to look about for a good drumming place.</span></p>
+    <p class="pnext"><span>It wasn't long before he discovered a strip of tin nailed upon the roof of Farmer Green's barn.</span></p>
+    <p class="pnext"><span>"Ah!" cried Reddy the moment he spied this treasure. "Just what I need!" And settling himself down upon it he hammered out a long, rolling tattoo with his strong bill.</span></p>
+    <p class="pnext"><span>It mattered not to him that Farmer Green's family was sound asleep. He didn't care whether he disturbed anybody. He liked to hear his own drumming; and he intended to drum.</span></p>
+    <p class="pnext"><span>"This is the finest drumming place I've ever had!" Reddy Woodpecker cried aloud. "I don't care if the neighbors are disagreeable to me. I'm glad I came here to spend the summer."</span></p>
+    <p class="pnext"><span>So he made good use of that bit of tin with which Farmer Green had mended the roof of the barn. Each morning (if it wasn't raining) he flew to the barn to beat his tattoo. And he began to speak of "My tin," and "My roof"—and even of "My barn!"</span></p>
+    <p class="pnext"><span>Then, one morning, Reddy was a bit lazy. He was late about his morning drumming. And before he had left the orchard where he had decided to live he heard a sound that gave him a great start. From the direction of the barn came a rolling beat which filled him with dismay.</span></p>
+    <p class="pnext"><span>"Who's that drumming?" he exclaimed. "It can't be myself, because I'm here in the orchard." Then all at once he became terribly angry. "It's somebody else!" he muttered. "Somebody has stolen my drumming place—my piece of tin—my roof—my barn!"</span></p>
+    <p class="pnext"><span>He flung himself off the old, dead apple tree where he had been looking for grubs for his breakfast and flew straight towards the rolling sound which still beat upon the air.</span></p>
+    <p class="pnext"><span>It was just as he had feared. A stranger sat upon the strip of tin pounding away with his bill as if it were his duty to waken everybody in Pleasant Valley. He wasn't as handsomely dressed as Reddy Woodpecker. He wore a brown and gray and black suit, with a patch of white low down upon his back and a splash of red on the back of his head. From each side of his bill reached a black mustache. This mustache gave the strange drummer a brigandish air which made Reddy Woodpecker think twice before he spoke to him. But Reddy was so angry that he just had to say something.</span></p>
+    <p class="pnext"><span>"Hop away from there!" he cried.</span></p>
+    <p class="pnext" id="id1"><span>The stranger stopped drumming and looked up with a smile. He said only one word. It was "Why?"</span></p>
+    <p class="pnext"><span>"Because," said Reddy Woodpecker, "that bit of tin belongs to me."</span></p>
+    <p class="pnext"><span>"Does it?" asked the other. "I thought it belonged to Farmer Green."</span></p>
+    <p class="pnext"><span>Reddy Woodpecker noticed that the stranger was bigger than he was. And that fact, as well as the fierce mustache, made him hesitate again. He wanted to call the stranger a name. But he didn't quite dare.</span></p>
+    <p class="pnext"><span>Then the stranger spoke again. He spoke very agreeably, too.</span></p>
+    <p class="pnext"><span>"What use do you make of this tin?" he inquired.</span></p>
+    <p class="pnext"><span>"I drum on it," Reddy replied.</span></p>
+    <p class="pnext"><span>"Oh!" said the gentleman with the mustache. "Why didn't you say so before?" And he bowed and scraped in a most polite fashion. "I resign!" he cried. In another moment he was gone.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker hastened to beat his morning tattoo upon the tin. And while he was drumming he noticed a Barn Swallow watching him.</span></p>
+    <p class="pnext"><span>"Who was that chap that just left?" he asked.</span></p>
+    <p class="pnext"><span>"Don't you know him?" Mr. Barn Swallow exclaimed. "That's Mr. Flicker."</span></p>
+    <p class="pnext"><span>"Huh!" Reddy Woodpecker grunted. "I don't think much of his drumming."</span></p>
+    <p class="pnext"><span>"You ought to," remarked Mr. Barn Swallow.</span></p>
+    <p class="pnext"><span>"Why?" Reddy inquired.</span></p>
+    <p class="pnext"><span>"Because he's a distant cousin of yours," Mr. Barn Swallow explained. "He belongs to the Woodpecker family."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-high-hole"><span class="bold large">IV</span></p>
+    <p class="center pnext"><span class="bold large">THE HIGH-HOLE</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Reddy Woodpecker lost no time in making friends with his cousin Mr. Flicker. Reddy knew well enough that most of the birds in the neighborhood wished he hadn't come there to live. So he thought it wise to be pleasant and polite to Mr. Flicker. There was no knowing when he might need one friend among so many enemies. He even let Mr. Flicker drum upon the strip of tin upon the roof of the barn. But secretly Reddy thought him a queer chap.</span></p>
+    <p class="pnext"><span>"There's one thing that's very odd about you," Reddy said to Mr. Flicker one day. "If you're a Woodpecker, why don't you peck wood? I've noticed that you spend most of your time on the ground—when you're not drumming upon my tin."</span></p>
+    <p class="pnext"><span>Mr. Flicker laughed.</span></p>
+    <p class="pnext"><span>"Oh!" he said lightly, "we Flickers have found an easier way to get a living than by drilling wood with our bills to find grubs. We eat ants," he explained. "And that's why you see me on the ground so much, because that's where the ants live." At the moment Mr. Flicker was on the ground, while Reddy clung to the trunk of a tree near him. And just to prove the truth of his statement Mr. Flicker made a quick jab into the turf with his bill. He pulled his bill out at once, giving Reddy Woodpecker a glimpse of an ant before he swallowed it.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker stared at him in amazement. "Where's your home?" he asked Mr. Flicker. "Is your home on the ground?"</span></p>
+    <p class="pnext"><span>"Bless you, no!" cried Mr. Flicker. "I'm no ground bird. My wife and I have a fine hole in an old apple tree in the orchard."</span></p>
+    <p class="pnext"><span>Reddy Woodpecker had to approve of that, anyhow. So he nodded his red-capped head.</span></p>
+    <p class="pnext"><span>"You're sensible in one way, at least," he remarked. "That's the way to live, if only you build high enough, out of harm's way."</span></p>
+    <p class="pnext"><span>Mr. Flicker grinned at him.</span></p>
+    <p class="pnext"><span>"It's plain that you don't know we Flickers are sometimes called High-holes," he said, "because of the way we nest."</span></p>
+    <p class="pnext"><span>"Ah! So you have two names, eh?" Reddy Woodpecker exclaimed, as he speared a grub with his tongue and drew it out from under a bit of bark. "I should think you'd find that confusing. I should think you'd forget who you were, sometimes."</span></p>
+    <p class="pnext"><span>"Oh! It's easy when you get used to it," Mr. Flicker replied. He paused to capture another ant. And then he added, "I have more than just two names. I have one hundred and twenty-four in all."</span></p>
+    <p class="pnext"><span>"My goodness!" cried Reddy. He was so astonished that he missed a stab at a fine grub that was right under his nose. "My goodness! Has your wife as many names as that?"</span></p>
+    <p class="pnext"><span>"Yes!" said Mr. Flicker.</span></p>
+    <p class="pnext"><span>"And your children?"</span></p>
+    <p class="pnext"><span>Mr. Flicker nodded.</span></p>
+    <p class="pnext"><span>"Sakes alive!" Reddy exclaimed. "How do you ever feed them all?"</span></p>
+    <p class="pnext"><span>Mr. Flicker gave a long, rolling, curious laugh.</span></p>
+    <p class="pnext"><span>"We feed the children under only one name," he explained, "although I must confess it sometimes seems to me that each of them eats enough for one hundred and twenty-four youngsters."</span></p>
+    <p class="pnext"><span>"I know how that is," said Reddy Woodpecker. "My home is in a tree in the orchard, too. And I'm raising a family of four myself."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="too-much-cousin"><span class="bold large">V</span></p>
+    <p class="center pnext"><span class="bold large">TOO MUCH COUSIN</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Reddy Woodpecker wished that he hadn't been so pleasant to his cousin Mr. Flicker. It was all well enough for Mr. Flicker to drum upon Reddy's bit of tin on the roof of the barn so long as he drummed late in the morning. But when he drummed early, as he sometimes did, it usually happened that Reddy had to wait before he could begin his own morning tattoo.</span></p>
+    <p class="pnext"><span>And Reddy Woodpecker didn't like that at all. In fact it seemed to him that Mr. Flicker had quite forgotten his manners. For if he happened to reach the barn first he never stopped drumming until he had all but drummed his head off. At least, that was the way it seemed to Reddy Woodpecker.</span></p>
+    <p class="pnext"><span>At such times Reddy did everything he could think of—short of actually fighting—to make Mr. Flicker stop. He made a sound like a tree toad,</span> <em class="italics">ktr-rr, kttr-r-r</em><span>. He tapped on the shingles with his bill. He flew right over Mr. Flicker's head. But it seemed as if Mr. Flicker simply couldn't take a hint.</span></p>
+    <p class="pnext"><span>"I don't like to order him to hop away," thought Reddy. "He's my cousin. Besides, he's bigger than I am; and he does look terribly fierce with that black mustache."'</span></p>
+    <p class="pnext"><span>Though he may have</span> <em class="italics">looked</em> <span>fierce, Mr. Flicker always</span> <em class="italics">acted</em> <span>in the most pleasant manner possible. And when he finished his drumming he never failed to ask Reddy Woodpecker how he liked it.</span></p>
+    <p class="pnext"><span>It was a hard question for Reddy to answer, because he didn't care in the least for Mr. Flicker's tattoos. He thought his own were far better. Sometimes Reddy pretended not to hear his cousin's question, but started drumming at once. Sometimes he said, "I believe that's an improvement over yesterday's tattoo." And at last he exclaimed one morning, "You ought to join the Woodchuck brothers!"</span></p>
+    <p class="pnext"><span>Mr. Flicker was a great person to ask, "Why?" He asked it now.</span></p>
+    <p class="pnext"><span>"Because," Reddy told him, "the Woodchuck brothers are famous whistlers. And they need somebody to drum for them while they whistle. I've often heard them chirping away by themselves over in the pasture. And as you must know, there's no music that sounds better than drumming, with a little shrill whistling to go with it—unless it's a little whistling, with a plenty of loud drumming."</span></p>
+    <p class="pnext"><span>Mr. Flicker's favorite word "Why" sprang to his bill again. "Why," he inquired, "do you not drum for the Woodchuck brothers yourself?"</span></p>
+    <p class="pnext"><span>Reddy Woodpecker shook his head.</span></p>
+    <p class="pnext"><span>"I want to practice more, before I join a troupe," he said.</span></p>
+    <p class="pnext"><span>"There!" Mr. Flicker exclaimed. "I like to hear people talk that way. That shows that you don't think you're the best drummer in Pleasant Valley."</span></p>
+    <p class="pnext"><span>"I don't, eh?" said Reddy.</span></p>
+    <p class="pnext"><span>"No, you don't!" said Mr. Flicker. And it was plain that</span> <em class="italics">he</em> <span>didn't think so, either. But before Reddy could make up his mind to quarrel with his cousin Mr. Flicker asked him another question—not "Why?" but "Where?" "Where—" said Mr. Flicker earnestly—"where can one find these Woodchuck brothers?"</span></p>
+    <p class="pnext"><span>"One can find them in the pasture, unless they're in the clover patch. Just now they are probably in the pasture, for it's a bit early in the season for clover."</span></p>
+    <p class="pnext"><span>"The pasture!" repeated Mr. Flicker. "Ah! There must be ant hills in the pasture."</span></p>
+    <p class="pnext"><span>"Hundreds of them!" said Reddy.</span></p>
+    <p class="pnext"><span>"Then I'll go to see the Woodchuck brothers at once," Mr. Flicker decided. So he flew off.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="mr-flicker-s-plans"><span class="bold large">VI</span></p>
+    <p class="center pnext"><span class="bold large">MR. FLICKER'S PLANS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>In a little while Mr. Flicker returned from his trip to the pasture to see the Woodchuck brothers. Hurrying into the orchard he called to Reddy Woodpecker, "They're thinking it over."</span></p>
+    <p class="pnext"><span>"They'll want you to drum for them," Reddy assured him. "There's no doubt that the Woodchuck brothers will accept your offer.... Why don't you move up to the pasture at once? You'd find it handy, living in the Woodchucks' door-yard."</span></p>
+    <p class="pnext"><span>"I can't do that," said Mr. Flicker. "You forget my family."</span></p>
+    <p class="pnext"><span>"Move them too!" Reddy urged him.</span></p>
+    <p class="pnext"><span>But Mr. Flicker shook his head. "I don't believe my wife would be willing," he replied. "Besides, there's that piece of tin on the roof of the barn. Would you advise me to move that?"</span></p>
+    <p class="pnext"><span>"No!" Reddy cried hastily. "Don't move the tin! In fact, Mr. Flicker, I shouldn't move at all, if I were you."</span></p>
+    <p class="pnext"><span>But Mr. Flicker had liked the plan of moving to the pasture to live. He had found great quantities of ants there. And to Reddy's dismay he insisted that he should move and take the strip of tin with him. That is to say, he intended to move as soon as his wife gave him permission.</span></p>
+    <p class="pnext"><span>It was no wonder Reddy wished he had never put such an idea into his cousin Mr. Flicker's head. He had hoped to get rid only of Mr. Flicker and his drumming. He had never dreamed that Mr. Flicker would want to take the precious bit of tin with him when he went.</span></p>
+    <p class="pnext"><span>Shortly afterward Mr. Flicker reported that it was just as he had thought. Mrs. Flicker wouldn't listen to moving just then. But later, after the children learned to fly, and could feed themselves, she would have no objection to the change of residence.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker cocked an eye toward the roof of the barn.</span></p>
+    <p class="pnext"><span>"That tin—" he said—"you can't take it with you when you move. It belongs to Farmer Green."</span></p>
+    <p class="pnext"><span>"Oh!" Mr. Flicker exclaimed. "I thought it belonged to you. And I knew</span> <em class="italics">you</em> <span>wouldn't object to your cousin's</span> <em class="italics">borrowing</em> <span>it for the rest of the season—now would you?"</span></p>
+    <p class="pnext"><span>But Reddy Woodpecker wasn't going to answer any dangerous questions. "The tin is Farmer Green's," he declared.</span></p>
+    <p class="pnext"><span>It seemed as if Mr. Flicker were full of alarming thoughts.</span></p>
+    <p class="pnext"><span>"I wish," he said, "we'd have a cyclone that would rip that tin off the barn and carry it up to the pasture."</span></p>
+    <p class="pnext"><span>"Oh, my goodness!" cried Reddy Woodpecker. And he worried dreadfully all the rest of that day. There's no knowing when he would have stopped fretting had Mr. Flicker not made a certain report to him the following morning.</span></p>
+    <p class="pnext"><span>"The Woodchuck brothers don't want me to drum for them," he announced.</span></p>
+    <p class="pnext"><span>"Then you aren't going to move!" cried Reddy.</span></p>
+    <p class="pnext"><span>"No!" Mr. Flicker replied. "And I don't intend there shall be any cyclone, either."</span></p>
+    <p class="pnext"><span>So at last Reddy Woodpecker felt better.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-two-neighbors"><span class="bold large">VII</span></p>
+    <p class="center pnext"><span class="bold large">THE TWO NEIGHBORS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>While Reddy Woodpecker and his cousin were getting acquainted their wives became quite friendly. Living as they did, each in an old apple tree at the lower end of the orchard, they often met. And since their doorways were almost opposite each other Mrs. Woodpecker and Mrs. Flicker didn't even have to leave their homes to enjoy a neighborly chat.</span></p>
+    <p class="pnext"><span>If one of them had something specially interesting to say, all she had to do was to stick her head out of the hole in the trunk of her tree and call. And if the other happened to be at home it was never more than a second before her head popped forth from her doorway. It was all very simple and most convenient.</span></p>
+    <p class="pnext"><span>Everything was pleasant until one day something happened. Something changed the friendly feelings between the two ladies. When Reddy Woodpecker peered out of his doorway one morning Mrs. Flicker called to him, "Good morning, my dear!"</span></p>
+    <p class="pnext"><span>He was so surprised he didn't know what to say.</span></p>
+    <p class="pnext"><span>But Mrs. Woodpecker knew what to say. It chanced that she was clinging to a limb above their home, so screened by some leaves that Mrs. Flicker couldn't see her. She quickly made known her presence. And she said so much that Mrs. Flicker soon withdrew her head. She hadn't answered Mrs. Woodpecker. Indeed she had had no opportunity; for Mrs. Woodpecker talked fast and furiously.</span></p>
+    <p class="pnext"><span>"It's no wonder she hides!" Mrs. Woodpecker spluttered. "I'd like to know what she means by calling my husband her 'dear!'"</span></p>
+    <p class="pnext"><span>Well, Reddy Woodpecker felt just as uncomfortable as Mrs. Flicker must have felt. But he didn't hide. He didn't dare to hide.</span></p>
+    <p class="pnext"><span>"What had you said to her?" Mrs. Woodpecker demanded.</span></p>
+    <p class="pnext"><span>"Honestly," Reddy replied, "I hadn't said a word. I had just stuck my head out. And the first thing I knew Mrs. Flicker called to me. You heard what she said."</span></p>
+    <p class="pnext"><span>"I certainly did!" was his wife's grim response. "It was a very queer way for her to speak to you."</span></p>
+    <p class="pnext"><span>"It was nothing—" Reddy assured her—"nothing at all. She made a mistake."</span></p>
+    <p class="pnext"><span>"She certainly did!" cried Mrs. Woodpecker. "She didn't know I was right here where I could hear her. She should have been more careful. That's where she made a serious blunder."</span></p>
+    <p class="pnext"><span>"Oh, my goodness!" said Reddy. "I didn't mean that. It wasn't that sort of mistake. It was this sort: Mrs. Flicker——"</span></p>
+    <p class="pnext"><span>"Don't mention her name to me again!" shrilled Mrs. Woodpecker.</span></p>
+    <p class="pnext"><span>"Well, how can I talk about her, then?" Reddy asked his wife.</span></p>
+    <p class="pnext"><span>"If you feel that you</span> <em class="italics">must</em> <span>talk about her," said Mrs. Woodpecker, "call her 'she.'"</span></p>
+    <p class="pnext"><span>"All right! She made this mistake: She thought she was talking to you."</span></p>
+    <p class="pnext"><span>Mrs. Woodpecker laughed bitterly at that.</span></p>
+    <p class="pnext"><span>"You'll have hard work making me believe it," she told her husband.</span></p>
+    <p class="pnext"><span>"Well, you ask her if it isn't the truth," Reddy urged.</span></p>
+    <p class="pnext"><span>"I will!" his wife promised. "Don't worry! I'll ask her.... And now," she added, "you'd better go and find some breakfast for the children. We can get along without any early tattoo this morning."</span></p>
+    <p class="pnext"><span>He went.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="an-early-call"><span class="bold large">VIII</span></p>
+    <p class="center pnext"><span class="bold large">AN EARLY CALL</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Mrs. Woodpecker flew to her neighbor Mrs. Flicker's tree and rapped,</span> <em class="italics">tap-tap-tap-tap</em><span>. She didn't rap gently, either. She was not in a gentle mood. She intended to find out why Mrs. Flicker had called to Reddy Woodpecker, "Good morning, my dear!"</span></p>
+    <p class="pnext"><span>Mrs. Flicker promptly stuck her head out of her door.</span></p>
+    <p class="pnext"><span>"My husband is not at home," she said. And then she vanished.</span></p>
+    <p class="pnext"><span>"Well, the very idea! What a remark to make to me!" cried Mrs. Woodpecker. "As if I'd call on a gentleman!" Being angrier than ever, she rapped harder than before.</span></p>
+    <p class="pnext"><span>Again Mrs. Flicker peered out. Again she spoke.</span></p>
+    <p class="pnext"><span>"Did you wish to leave a message, Mr. Woodpecker?" she inquired.</span></p>
+    <p class="pnext"><span>"I'm not Mr. Woodpecker! I'm Mrs. Woodpecker!" shrieked the caller.</span></p>
+    <p class="pnext"><span>"Oh! Oh! Oh! My! My! My!" exclaimed Mrs. Flicker, who was greatly astonished. "I beg your pardon! Excuse me! It's my mistake."</span></p>
+    <p class="pnext"><span>"It certainly isn't mine," said Mrs. Reddy Woodpecker. "It seems to me you're making a good many mistakes this morning, madam."</span></p>
+    <p class="pnext"><span>Mrs. Flicker looked very unhappy. She wasn't used to being called 'madam.' She could see that Mrs. Woodpecker was furious. She wanted to be friends with Mrs. Woodpecker.</span></p>
+    <p class="pnext"><span>"You and Mr. Woodpecker look very much alike," Mrs. Flicker said to her angry caller. "When one of you peeps out of your house it's hard to tell who's who. Just now when I came to my doorway I could see only your head. And I thought it was your husband. When I spoke to your husband a few minutes ago I thought it was you."</span></p>
+    <p class="pnext"><span>Mrs. Woodpecker stared at her neighbor for a few moments. Somehow she thought Mrs. Flicker must be telling the truth.</span></p>
+    <p class="pnext"><span>"It's your red caps, I think," Mrs. Flicker went on. "They make you look like twins."</span></p>
+    <p class="pnext"><span>"Dear me!" said Mrs. Woodpecker. "I hadn't thought of that. What can we do?" Her anger had suddenly left her.</span></p>
+    <p class="pnext"><span>"My husband and I have things nicely arranged," Mrs. Flicker told her caller.</span></p>
+    <p class="pnext"><span>"Now, you never have mistaken him for me, have you?"</span></p>
+    <p class="pnext"><span>"No!"</span></p>
+    <p class="pnext"><span>"Nor me for him?"</span></p>
+    <p class="pnext"><span>"No!"</span></p>
+    <p class="pnext"><span>"Do you know the reason?" Mrs. Flicker asked.</span></p>
+    <p class="pnext"><span>"No! No! I can't say I do," replied Mrs. Woodpecker eagerly.</span></p>
+    <p class="pnext"><span>"Well," said Mrs. Flicker, "my husband wears a black mustache.... And of course I don't," she added.</span></p>
+    <p class="pnext"><span>"That's it!" cried Mrs. Woodpecker. "I hadn't realized it. But it's so. And I must tell my husband to wear a mustache. It's the only safe way to avoid trouble. Then people can tell us apart."</span></p>
+    <p class="pnext"><span>Then Mrs. Woodpecker hurried away to speak to her husband. She was surprised that he didn't take kindly to her suggestion.</span></p>
+    <p class="pnext"><span>"I don't want to wear a mustache," he objected.</span></p>
+    <p class="pnext"><span>"But you</span> <em class="italics">must</em><span>!" she insisted.</span></p>
+    <p class="pnext"><span>"Why don't</span> <em class="italics">you</em> <span>wear one?" he inquired. "It would do just as well."</span></p>
+    <p class="pnext"><span>"Don't be silly!" she snapped. "Ladies never wear mustaches."</span></p>
+    <p class="pnext"><span>"Yes, they do," he replied.</span></p>
+    <p class="pnext"><span>"No, they don't!" she disputed.</span></p>
+    <p class="pnext"><span>Well, he saw at once that it was useless to argue with her.</span></p>
+    <p class="pnext"><span>"Come with me a moment, my dear!" Reddy begged her.</span></p>
+    <p class="pnext"><span>She thought he was going somewhere to get a mustache. So of course she hurried after him.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker stopped beside Farmer Green's barn.</span></p>
+    <p class="pnext"><span>"There!" he said, as he waved a wing towards a great poster that was pasted upon the side of the barn. "Do you see that lady? She has a mustache—and a beard, too!"</span></p>
+    <p class="pnext"><span>It was just as he said. Mrs. Woodpecker couldn't help admitting that, to herself. And though she didn't speak to Reddy the rest of that day, he was satisfied. For she didn't mention mustaches to him again.</span></p>
+    <p class="pnext"><span>"It was lucky for me," he thought, "that the circus came to these parts this summer."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="mrs-robin-worries"><span class="bold large">IX</span></p>
+    <p class="center pnext"><span class="bold large">MRS. ROBIN WORRIES</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Though the Flickers welcomed Reddy Woodpecker when he came to live in Pleasant Valley there was hardly another bird family that wasn't sorry to see him settle there. Among all the feathered folk on Farmer Green's place the Robin family was perhaps the sorriest. They had a nest of eggs in the orchard, in a crotch of an old apple tree. And it was on just such trees that Reddy Woodpecker spent a great deal of his time, hunting for grubs.</span></p>
+    <p class="pnext"><span>Jolly Robin himself might not have paid much heed to Reddy. But Mrs. Robin was a great worrier. Often she worried over nothing at all. And now that she had had a few talks with timid little Mrs. Chippy about the newcomer, Reddy Woodpecker, Mrs. Robin firmly believed that he had come to the farm expressly to rob her of her four greenish-blue eggs. After each talk with Mrs. Chippy Mrs. Robin came home all a-flutter.</span></p>
+    <p class="pnext"><span>"We'll have to watch sharp!" she said to Jolly Robin again and again. "This Woodpecker person is a rascal. It's a pity we built here in the orchard. We'd have been safer on top of one of the posts under Farmer Green's porch."</span></p>
+    <p class="pnext"><span>"I mentioned that very place," Jolly reminded her. "But you were afraid of Miss Kitty Cat."</span></p>
+    <p class="pnext"><span>Not a day passed without some such words between them. Jolly did what he could to calm his wife's fears. He stayed near home all the time, when often he would have liked to fly across the meadow to chat with friends who lived on the edge of the woods.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker never started to rap on a tree but Mrs. Robin set up a loud twitter, begging Jolly to hurry back to the nest.</span></p>
+    <p class="pnext"><span>He was wonderfully patient with her. Yet he couldn't help hoping, secretly, for the day when his family should be grown up and able to look out for themselves.</span></p>
+    <p class="pnext"><span>But if Mrs. Robin was anxious about her eggs her worry was nothing compared with what it became when the nestlings broke through their shells.</span></p>
+    <p class="pnext"><span>"This is the finest family in the whole valley," she confided to her husband. "I know that terrible Woodpecker person will steal these children if he can."</span></p>
+    <p class="pnext"><span>If the youngsters didn't peep for food their mother feared they were ill. If they did peep she feared Reddy Woodpecker would hear them. "He's such a dangerous person!" she would exclaim. "I wonder if he ever eats anything except eggs and nestlings."</span></p>
+    <p class="pnext"><span>"Yes, indeed!" Jolly assured her again and again. "He eats grubs, which he finds on the trees. And he eats insects, which he catches in the air."</span></p>
+    <p class="pnext"><span>"Thank goodness!" Mrs. Robin murmured. But her relief was short-lived. For she happened to meet little Mrs. Chippy one day and learned another bit of distressing news about Reddy Woodpecker. "He's a fruit eater!" Mrs. Robin told Jolly. "And you know we've been depending on the raspberries for our children."</span></p>
+    <p class="pnext"><span>A few days later she came home in a dreadful state of mind.</span></p>
+    <p class="pnext"><span>"I went to take a look at the raspberry patch," she explained to her good husband. "I knew the berries would soon be ripe. In fact I've had my eye on one that was almost ready to be picked. And what do you think? Eight before my own eyes that ruffianly Reddy Woodpecker picked it and ate it himself!"</span></p>
+    <p class="pnext"><span>"Don't worry about that!" said Jolly Robin.</span></p>
+    <p class="pnext"><span>But Mrs. Robin insisted on worrying; nothing he said could stop her.</span></p>
+    <p class="pnext"><span>"Reddy Woodpecker is taking the food out of our children's mouths!" she wailed. "You'll have to drive him away from the raspberry patch! You'll have to fight him!"</span></p>
+    <p class="pnext"><span>Now, Jolly Robin hardly thought that he was a match for Reddy Woodpecker. So when his wife gave him those orders he began to worry, himself.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="obeying-orders"><span class="bold large">X</span></p>
+    <p class="center pnext"><span class="bold large">OBEYING ORDERS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Jolly Robin's worrying wife wouldn't give him a moment's peace.</span></p>
+    <p class="pnext"><span>"You'd better get along over to the raspberry patch," she kept telling him. "If you don't hurry that terrible Reddy Woodpecker will eat every berry. He'll snatch each one as it ripens and we shall not have any to feed our children."</span></p>
+    <p class="pnext"><span>Now, Jolly Robin didn't care to have any trouble with Reddy Woodpecker. But he soon saw that if he avoided Reddy he would only have trouble with Mrs. Robin. So at last he said, "Very well! I'll attend to him, my love." And off he flew, looking much braver than he felt. You'd have thought, to see him, that he longed to find Reddy Woodpecker. Really he hoped that he wouldn't find Reddy anywhere.</span></p>
+    <p class="pnext"><span>Much to Jolly Robin's dismay he met Reddy Woodpecker among the raspberry bushes. Jolly jumped when he saw that dashing newcomer. But it was too late to dodge out of sight. Reddy Woodpecker saw him. So Jolly Robin made up his mind to put on a bold front. Sitting on a fence post that overlooked the raspberry patch he stared hard at Reddy Woodpecker. He thought perhaps he could frighten him away.</span></p>
+    <p class="pnext"><span>He might as well have stared at the barn door. To his great distress Reddy Woodpecker picked a berry and flew to a near-by post, where he sat and ate the fruit with relish. When he had finished the dainty he pretended to notice Jolly Robin for the first time and he bowed and scraped in the politest fashion.</span></p>
+    <p class="pnext"><span>Still Jolly Robin did not utter a word. Nor did he return any of Reddy's bows. But he began to feel himself swelling; he began to feel his feathers ruffle up. And he knew then that he must speak soon or burst. For there was no doubt that he was growing angry. So presently he cried:</span></p>
+    <p class="pnext"><span>"Was that raspberry ripe?"</span></p>
+    <p class="pnext"><span>"Yes," replied Reddy Woodpecker, "and very juicy."</span></p>
+    <p class="pnext"><span>Now, Jolly Robin hadn't meant to ask any such question as that. He had meant to make some cutting remark. But he was so in the habit of being pleasant to everybody that it was very hard for him to be disagreeable.</span></p>
+    <p class="pnext"><span>"A-ahem!" he said. "Pardon me, sir! Did—did you know that my wife and I have been expecting to pick these raspberries for our children?"</span></p>
+    <p class="pnext"><span>But he might as well have said nothing at all. For Reddy Woodpecker only laughed and exclaimed, "You're a joker, aren't you?"</span></p>
+    <p class="pnext"><span>"No, I'm not," Jolly replied.</span></p>
+    <p class="pnext"><span>"Yes, you are," said Reddy Woodpecker. "You can't fool me. I know well enough that you don't intend to bring your children up on berries. I've seen you pulling angleworms for them too many times." Then Reddy dropped off his post and clung to a bush while he picked another berry that seemed redder than the rest.</span></p>
+    <p class="pnext"><span>"Well," Jolly thought, "I've talked to him anyhow. At least I can tell my wife that." So he left Reddy to enjoy the fruit and sailed away to his home.</span></p>
+    <p class="pnext"><span>"You're back very quickly," Mrs. Robin remarked when she saw him. "Didn't you find that Woodpecker person?"</span></p>
+    <p class="pnext"><span>"Oh, yes! I found him," Jolly explained. "I found him and I talked with him, too."</span></p>
+    <p class="pnext"><span>Mrs. Robin cast a sharp glance at her husband.</span></p>
+    <p class="pnext"><span>"Where is he now?" she inquired.</span></p>
+    <p class="pnext"><span>"He's eating raspberries in the berry patch," Jolly told her. "When I talked with him I said——"</span></p>
+    <p class="pnext"><span>"You</span> <em class="italics">said</em><span>!" Mrs. Robin interrupted. "You</span> <em class="italics">said</em><span>! The question is, what did you</span> <em class="italics">do</em><span>? If you didn't fight him you must go back and do your duty."</span></p>
+    <p class="pnext"><span>There was nothing he could do except obey her. So, feeling very desperate, Jolly Robin hurried back to the place where the raspberry bushes grew by the fence. He gave three loud chirps, to encourage himself. And then he darted down and sailed very close to Reddy Woodpecker's head. He didn't pause an instant to see what effect this action had on Reddy Woodpecker, but flew away as quickly as he could. "I guess I scared him that time," he muttered.</span></p>
+    <p class="pnext"><span>Meanwhile Reddy Woodpecker stared after him and watched him as he disappeared among the apple tree tops.</span></p>
+    <p class="pnext"><span>"Well, what do you think of that?" he said to himself with a grin.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="a-very-short-fight"><span class="bold large">XI</span></p>
+    <p class="center pnext"><span class="bold large">A VERY SHORT FIGHT</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Jolly Robin told his wife how he swooped down over Reddy Woodpecker's head. And he assured her that he had no doubt that Mr. Woodpecker would not be seen among the raspberry bushes again.</span></p>
+    <p class="pnext"><span>Jolly had felt quite pleased with himself. His threatened attack on Reddy had seemed to him to be very daring. So he was disappointed when his wife did not praise him.</span></p>
+    <p class="pnext"><span>"You ought to have stuck that rascal with your bill," Mrs. Robin complained. "If he's the sort of person I think he is he'll pay no heed to your warning."</span></p>
+    <p class="pnext"><span>As usual, Mrs. Robin proved to be right. That very day she herself beheld Reddy Woodpecker eating more raspberries. He had stolen every ripe berry. Though Mrs. Robin had hoped to find four (one for each of her nestlings) she didn't pick even one. They were all too hard and sour.</span></p>
+    <p class="pnext"><span>"It's a pity," she said to Jolly. "Everybody knows now-a-days that children need fruit. The day is past when you can bring them up on nothing but angleworms. You'll have to go back there to the raspberry patch and fight Reddy. You can't escape a fight any longer."</span></p>
+    <p class="pnext"><span>Well, what could he do? What could Jolly Robin do but obey his wife? He asked himself that question. And he could find only one answer. It was "Nothing!" There was nothing he could think of that would satisfy Mrs. Robin except a real battle. So he went forth.</span></p>
+    <p class="pnext"><span>Yes! Jolly Robin went forth very bravely to find Reddy Woodpecker. He meant to surprise him. But it was Jolly who received the surprise.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker attacked first! The moment he spied Jolly Robin Reddy hurled himself at him. He skimmed so near to Jolly's head that that astonished little fellow ducked and hurried away. Yes! Jolly Robin retreated. It wasn't that Reddy Woodpecker was bigger than he was. To tell the truth, Reddy wasn't quite so big. But he liked to fight. And Jolly Robin loved peace.</span></p>
+    <p class="pnext"><span>Jolly hid in the midst of a thick hedge that grew beyond the fence. "Well," he muttered, "that fight was soon over. There's no use of telling Mrs. Robin about it. She would only worry." He there a long time. He didn't want to go home. He didn't know what to do. So he thought and thought; until at last a happy idea popped into his head. "I'll get help!" he exclaimed. "I'll get my friends from the other side of the meadow to come and help me fight Reddy."</span></p>
+    <p class="pnext"><span>Mrs. Robin was worrying terribly when Jolly reached home.</span></p>
+    <p class="pnext"><span>"You've been gone a long time," she complained. "Did you chase that Woodpecker person out of the valley?"</span></p>
+    <p class="pnext"><span>"No!" said Jolly. "But I expect to to-morrow."</span></p>
+    <p class="pnext"><span>"I thought I told you to fight him to-day," said his wife somewhat tartly.</span></p>
+    <p class="pnext"><span>"Yes! Yes!" he replied hastily. "We had a set-to—Mr. Woodpecker and I. But the real fight will take place to-morrow."</span></p>
+    <p class="pnext"><span>"I'm glad to hear you talk that way at last," she told him. "It's high time something was done."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="jolly-robin-s-helper"><span class="bold large">XII</span></p>
+    <p class="center pnext"><span class="bold large">JOLLY ROBIN'S HELPER</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>The next morning Jolly Robin told his wife that she would have to do all the work of gathering the children's breakfast. "You know, my love," he explained, "I have important business to attend to to-day." And before she had time to object he left her.</span></p>
+    <p class="pnext"><span>Over near the garden fence he met three plump Robins who had flown across the meadow to help him fight Reddy Woodpecker. And soon the four had dropped down into the raspberry patch.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker had not arrived. So, while they were waiting Jolly Robin's friends helped themselves to berries. Under the hot sun the fruit had ripened fast. Finding it both sweet and juicy they ate of it freely. And Jolly Robin could think of no reason why he should not do likewise.</span></p>
+    <p class="pnext"><span>By the time Reddy Woodpecker came, all the Robins from over the meadow were feeling so well fed and good-natured that they were in anything but a fighting mood.</span></p>
+    <p class="pnext"><span>"Let that Woodpecker enjoy this fruit if he likes it," they said to Jolly in an undertone. "There's more than enough for everybody. And now," they told him, "we must go home, because we have to help our wives feed our children."</span></p>
+    <p class="pnext"><span>Off they flew. And Jolly Robin found himself alone with Reddy Woodpecker.</span></p>
+    <p class="pnext"><span>"Ahem!" exclaimed Jolly Robin. "It's a fine morning, isn't it?"</span></p>
+    <p class="pnext"><span>"Delightful!" said Reddy Woodpecker.</span></p>
+    <p class="pnext"><span>"It looks as if you and I were going to have this raspberry patch all to ourselves, doesn't it?" Jolly continued.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker agreed with him.</span></p>
+    <p class="pnext"><span>"We ought to keep others out of it," said Jolly.</span></p>
+    <p class="pnext"><span>Again Reddy Woodpecker was of the same mind as he.</span></p>
+    <p class="pnext"><span>"Then this is a bargain!" cried Jolly Robin. "I'll ask you to guard the place alone for a few minutes while I go home and speak to my wife."</span></p>
+    <p class="pnext"><span>Reddy Woodpecker grinned as he watched Jolly Robin winging his way homeward.</span></p>
+    <p class="pnext"><span>"Humph!" he grunted. "I may as well let that Robin have a taste of these berries. I certainly can't eat them all, nor carry them all home to my family."</span></p>
+    <p class="pnext"><span>Jolly Robin found his wife anxiously awaiting his return.</span></p>
+    <p class="pnext"><span>"Have you chased that Woodpecker person away?" she demanded.</span></p>
+    <p class="pnext"><span>"No, my love," he replied. "I 've made other arrangements. Mr. Woodpecker is working for me now. So of course I don't want to scare him off the farm. He's helping me at the raspberry patch. He's helping me to guard the fruit. In fact I couldn't have come back to speak to you now if it wasn't for him. He's watching the berries for me now."</span></p>
+    <p class="pnext"><span>"Nonsense!" cried Mrs. Robin. "If that Woodpecker person is in the raspberry patch you may be sure he's eating berries as fast as he can."</span></p>
+    <p class="pnext"><span>"Only a few!" Jolly assured her. "There's more than enough for our family and his."</span></p>
+    <p class="pnext"><span>"How do you know that?" she demanded. "Did you count the berries?"</span></p>
+    <p class="pnext"><span>"No!" he replied.</span></p>
+    <p class="pnext"><span>"Go back and count them at once!" she commanded.</span></p>
+    <p class="pnext"><span>"Yes, my love!" Jolly answered.</span></p>
+    <p class="pnext"><span>He really did try to count the berries. But he soon found it to be an impossible task. Reddy Woodpecker ate so many raspberries and carried so many home to his children that Jolly Robin despaired of ever settling upon the correct number.</span></p>
+    <p class="pnext"><span>He felt very unhappy over the matter. And he even asked Reddy Woodpecker what he ought to do.</span></p>
+    <p class="pnext"><span>"Oh, tell your wife there are a million," Reddy Woodpecker suggested. "If she doesn't believe you, let her count them herself!"</span></p>
+    <p class="pnext"><span>"Oh, I couldn't do that," said Jolly Robin.</span></p>
+    <p class="pnext"><span>"Well, I say there are a million," Reddy declared. Then he picked and ate another berry. "Now there are nine hundred and ninety-nine thousand nine hundred and ninety-nine," he announced. "Go home and tell your wife I said so."</span></p>
+    <p class="pnext"><span>So Jolly Robin went. He went and told Mrs. Robin what Reddy Woodpecker had said.</span></p>
+    <p class="pnext"><span>She turned her back on him and exclaimed, "Fiddlesticks!"</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-carpenter"><span class="bold large">XIII</span></p>
+    <p class="center pnext"><span class="bold large">THE CARPENTER</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>One day Reddy Woodpecker was</span> <em class="italics">tap, tap, tapping</em> <span>on a tall poplar that grew beside the brook. He had discovered a tiny opening in the bark and he wanted to see what was at the further end of it.</span></p>
+    <p class="pnext"><span>Suddenly a voice called out, "Well, well, well! What is it?" And a pale-faced person not unlike Buster Bumblebee peered out at Reddy Woodpecker. He was careful to keep safely out of reach of Reddy's horny tongue. "I hope," said the dweller in the poplar, "you're not wanting me to build you a house. I can't work for you just now. I'm very busy to-day, making an addition to my own house."</span></p>
+    <p class="pnext"><span>Reddy stared at the speaker.</span></p>
+    <p class="pnext"><span>"I've already built my house—with my wife's help," he replied. "Why should you think I needed your assistance?"</span></p>
+    <p class="pnext"><span>"Because," said the other, "I'm Whiteface, the Carpenter Bee. The neighbors are always pestering me to help them."</span></p>
+    <p class="pnext"><span>Then Reddy Woodpecker noticed that Whiteface was covered with sawdust. But before he could examine him very closely the carpenter vanished.</span></p>
+    <p class="pnext"><span>"I must have another look at that queer person," Reddy thought. So he began to rap once more.</span></p>
+    <p class="pnext"><span>Again the carpenter peeped forth.</span></p>
+    <p class="pnext"><span>"If you're out of work," he said, "I'll tell you plainly that you can't find it here. I never employ strangers to work for me, for I'm</span> <em class="italics">very</em> <span>particular." Then he was gone.</span></p>
+    <p class="pnext"><em class="italics">Tap, tap, tap</em><span>! This time, when the carpenter answered Reddy's knocking, he was most impatient.</span></p>
+    <p class="pnext"><span>"Go away!" he cried. "You're shaking my whole house. I don't like it."</span></p>
+    <p class="pnext"><span>"Not so fast!" said Reddy Woodpecker. "I'm only making a friendly call. You and I are neighbors. But how am I ever going to get acquainted with you if you won't stop for a short chat?"</span></p>
+    <p class="pnext"><span>"I can't stand here idling my time away," the carpenter replied. "I'm a busy bee. Come inside if you want to see me!" And he disappeared again.</span></p>
+    <p class="pnext"><span>How could Reddy Woodpecker accept his invitation to enter? The carpenter's doorway was too small for him. And the wood was not the sort that Reddy liked to chisel away with his bill. It wasn't brittle enough to suit him. So he knocked again.</span></p>
+    <p class="pnext"><span>When the carpenter came rushing back to his doorway his pale face wore an anxious look.</span></p>
+    <p class="pnext"><span>"Oh!" he said. "I thought it was a fire. I thought somebody wanted to tell me my house was on fire. But it's only you. What do you want now?"</span></p>
+    <p class="pnext"><span>"I know you'd like to learn my name," Reddy Woodpecker began.</span></p>
+    <p class="pnext"><span>"Just leave your card!" the carpenter told him. "I'll look at it later when I have more time."</span></p>
+    <p class="pnext"><span>"When will that be?" Reddy demanded.</span></p>
+    <p class="pnext"><span>"I don't know," the odd person confessed. "It seems as if I never would get my house finished."</span></p>
+    <p class="pnext"><span>"Then," said Reddy, "there can't be any use in my leaving my card. Probably when you found time to look at it you wouldn't remember who left it."</span></p>
+    <p class="pnext"><span>"Probably not!" the carpenter admitted. "Good day, sir!" And he dodged out of sight.</span></p>
+    <p class="pnext"><span>Still Reddy Woodpecker was not discouraged. He knocked a fifth time.</span></p>
+    <p class="pnext"><span>"What!" exclaimed the carpenter when he answered Reddy's tapping. "Haven't you gone yet?"</span></p>
+    <p class="pnext"><span>"No!" Reddy replied. "I want to say——"</span></p>
+    <p class="pnext"><span>"If you have anything more to tell me, write me a letter!" said the pale-faced carpenter. And he set up a sign where Reddy Woodpecker could see it: "This Is My Busy Day!" Then he passed from view.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker stayed a long time at the poplar tree beside the brook. He knocked and knocked and knocked until at last his head began to ache. But the sawdust-covered carpenter never showed his pale face again.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="mr-crow-s-questions"><span class="bold large">XIV</span></p>
+    <p class="center pnext"><span class="bold large">MR. CROW'S QUESTIONS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>If people snubbed Reddy Woodpecker he never cared. When the members of the Pleasant Valley Singing Society wouldn't let him join them he only smiled and said he intended to form a club of his own.</span></p>
+    <p class="pnext"><span>As soon as the bird neighbors heard of Reddy's plan they were all very curious to know more about it. But whenever anybody asked him questions he had little to say.</span></p>
+    <p class="pnext"><span>"You'll learn all about it later," he told them. "Please don't bother me now, for I'm a busy bird. I'm starting my club."</span></p>
+    <p class="pnext"><span>It was easy for Reddy Woodpecker to keep his secrets from such small feathered folk as little Mr. Chippy. But there was one that couldn't rest until he found out what he wanted to know. This was old Mr. Crow. He shot question after question at Reddy Woodpecker. At last Reddy just had to tell him something in order to gain a little peace. Reddy knew that Mr. Crow would leave him as soon as he had picked up a bit of news. The old gentleman would hurry away to tell it to everybody in the valley.</span></p>
+    <p class="pnext"><span>"What's your club going to be named?" Whenever Mr. Crow talked with Reddy Woodpecker that was his favorite question. He asked it so many times and so loudly that just to get rid of him Reddy finally told him.</span></p>
+    <p class="pnext"><span>"I'm going to call my club 'The Redcaps,'" he said.</span></p>
+    <p class="pnext"><span>Old Mr. Crow didn't tarry an instant longer. With an eager look in his snapping black eyes he went flapping off on his broad wings, far down the valley.</span></p>
+    <p class="pnext"><span>Now, Mr. Crow was a fast worker. In an hour's time he had zigzagged back again, having spread his bit of news far and wide.</span></p>
+    <p class="pnext"><span>And when he had repeated it to the last neighbor he could find he hurried to the orchard to ask Reddy Woodpecker more questions.</span></p>
+    <p class="pnext"><span>The moment he found Reddy Mr. Crow began to put one question after another so fast that you couldn't have told where one ended and the next one began.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker pretended to be busier than ever.</span></p>
+    <p class="pnext"><span>"I can't stop now," he told Mr. Crow. "You'll have to see my secretary."</span></p>
+    <p class="pnext"><span>"Where is he? Who is he?" Mr. Crow inquired hoarsely.</span></p>
+    <p class="pnext"><span>"I can't answer those questions," Reddy replied.</span></p>
+    <p class="pnext"><span>"Why not?" demanded Mr. Crow.</span></p>
+    <p class="pnext"><span>"Because I haven't a secretary yet," Reddy explained.</span></p>
+    <p class="pnext"><span>"Why should you have a secretary?" Mr. Crow asked him.</span></p>
+    <p class="pnext"><span>"Why shouldn't I?" Reddy retorted. "I guess, Mr. Crow, you don't know much about clubs. I guess you don't know that the president of a club always has a secretary."</span></p>
+    <p class="pnext"><span>"Are you president of the Redcaps?" Mr. Crow cried breathlessly.</span></p>
+    <p class="pnext"><span>"Well—yes, I am!" Reddy admitted. "I didn't mean to tell you that to-day. But I can't deny it."</span></p>
+    <p class="pnext"><span>Mr. Crow was off like a shot. You'd have thought he had just spied Farmer Green with a gun in his hands. His</span> <em class="italics">caw, caw, caw</em> <span>told everybody in Pleasant Valley that he was going somewhere on important business.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker pulled a fat grub from its hiding place in the old apple tree. He could still hear Mr. Crow squawking when the old gentleman was half a mile away. And Reddy smiled as he swallowed the grub.</span></p>
+    <p class="pnext"><span>"That's better than putting the news in a newspaper," he said with a chuckle.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-redcaps"><span class="bold large">XV</span></p>
+    <p class="center pnext"><span class="bold large">THE REDCAPS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Reddy Woodpecker knew that Mr. Crow would come back to the orchard to ask him another question. The old gentleman simply had to learn more about Reddy's club.</span></p>
+    <p class="pnext"><span>"I'd like to knew—" said Mr. Crow—"I'd like to know why you are the president of The Redcaps."</span></p>
+    <p class="pnext"><span>"That's easily answered," Reddy replied. "It's because I wear the biggest and reddest cap of all the birds in the neighborhood."</span></p>
+    <p class="pnext"><span>Mr. Crow puzzled over the matter for a time.</span></p>
+    <p class="pnext"><span>"I don't understand what difference your cap makes," he said at last. "I've been thinking about joining the club. And</span> <em class="italics">I</em> <span>have no red cap."</span></p>
+    <p class="pnext"><span>"That's true, Mr. Crow," Reddy agreed. "And that's the reason why you can't join my club. Nobody that doesn't wear a red cap can be a member of The Redcaps."</span></p>
+    <p class="pnext"><span>Mr. Crow looked daggers at him.</span></p>
+    <p class="pnext"><span>"Humph!" cried the old gentleman. "I've been thinking about joining the club. But I've decided not to do it."</span></p>
+    <p class="pnext"><span>Reddy Woodpecker smiled at him. And for some reason Mr. Crow became angry.</span></p>
+    <p class="pnext"><span>"How many members has your club?" he squawked.</span></p>
+    <p class="pnext"><span>"One!" Reddy told him.</span></p>
+    <p class="pnext"><span>"Ha!" the old fellow exclaimed. "You can't have a club with only one member."</span></p>
+    <p class="pnext"><span>"I expect that several of the neighbors will join The Redcaps to-morrow," said Reddy Woodpecker. "They 're only waiting for an invitation."</span></p>
+    <p class="pnext"><span>"Let me see," Mr. Crow murmured. "There's your cousin Mr. Flicker. He wears a red patch on the back of his head. But you can't call it a cap."</span></p>
+    <p class="pnext"><span>"</span><em class="italics">I</em> <span>call it a cap," Reddy Woodpecker told him. "Mr. Flicker is going to get an invitation."</span></p>
+    <p class="pnext"><span>Mr. Crow then muttered something about</span> <em class="italics">cousins</em><span>, and added something more about</span> <em class="italics">birds of a feather flocking together</em><span>. And then he said, "There's the Downy Woodpecker and there's the Hairy Woodpecker—both cousins of yours, too. They've only what you might call a</span> <em class="italics">touch</em> <span>of red on the backs of their necks; but I suppose——"</span></p>
+    <p class="pnext"><span>"Yes! I'm going to invite them to join The Redcaps," Reddy interrupted.</span></p>
+    <p class="pnext"><span>Mr. Crow looked terribly upset, though he claimed it was no more than he had expected. "That will be about all the members you will get," he added.</span></p>
+    <p class="pnext"><span>"Oh, no!" Reddy exclaimed. "You forget Mr. Sapsucker. He has a scarlet crown. I'll want him."</span></p>
+    <p class="pnext"><span>Mr. Crow swallowed hard a few times but said nothing.</span></p>
+    <p class="pnext"><span>"Then there's the Ruby-crowned Kinglet," Reddy went on. "He's going to have an invitation. And so is Mr. Kingbird."</span></p>
+    <p class="pnext"><span>"Not Mr. Kingbird!" spluttered old Mr. Crow. "His crown is orange-colored."</span></p>
+    <p class="pnext"><span>"It's red enough for me," Reddy retorted. "And of course I'll ask little Mr. Chippy to join us."</span></p>
+    <p class="pnext"><span>"Nonsense!" cried Mr. Crow. "His cap is only chestnut-colored."</span></p>
+    <p class="pnext"><span>"It's red enough for me," Reddy Woodpecker repeated in a firm voice.</span></p>
+    <p class="pnext"><span>"My goodness!" Mr. Crow squalled. "I suppose you'll ask the whole Wood Thrush family too—and their cousin Mr. Veery. Their heads are reddish."</span></p>
+    <p class="pnext"><span>"No! They're too brown for me," Reddy Woodpecker decided, to Mr. Crow's great relief.</span></p>
+    <p class="pnext"><span>"What about Buddy Brown Thrasher?" Mr. Crow inquired. "What about his head?"</span></p>
+    <p class="pnext"><span>"Too brown!"</span></p>
+    <p class="pnext"><span>"Well," said old Mr. Crow, "I'm glad to see you have a</span> <em class="italics">little</em> <span>sense. But on the whole these Redcaps are going to be a queer lot."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="a-sly-trick"><span class="bold large">XVI</span></p>
+    <p class="center pnext"><span class="bold large">A SLY TRICK</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>This was the truth of the matter: Old Mr. Crow was jealous because he couldn't join Reddy Woodpecker's new club, The Redcaps. For days the old gentleman could speak of nothing else. He went grumbling and sneering up and down Pleasant Valley, stopping to talk with anybody he happened to see. It must be confessed that the neighbors found his ill humor very tiresome.</span></p>
+    <p class="pnext"><span>Meanwhile Reddy Woodpecker's club grew in numbers daily. It made Mr. Crow snort when anybody told him that The Redcaps had another new member.</span></p>
+    <p class="pnext"><span>Then all at once Mr. Crow's manner changed. He became quite sprightly and even winked an eye and cracked a joke now and then. His neighbors wondered what had happened to him.</span></p>
+    <p class="pnext"><span>They soon found out. For Mr. Crow announced that he had discovered a new member for Reddy Woodpecker's club. Strange to say, the old gentleman seemed to take great pride in helping The Redcaps.</span></p>
+    <p class="pnext"><span>"I'm going to take my find to the meeting of the club this afternoon," Mr. Crow told everybody.</span></p>
+    <p class="pnext"><span>"But you're not a member. You can't go to a meeting," his friends objected.</span></p>
+    <p class="pnext"><span>"Can't I?" said Mr. Crow wisely. "The air is free. I can go anywhere I please."</span></p>
+    <p class="pnext"><span>So that afternoon Mr. Crow flew down to the lower end of the meadow, where The Redcaps were gathering. He took a friend with him, whom he left hidden in some reeds at the edge of the swamp.</span></p>
+    <p class="pnext"><span>To Reddy Woodpecker Mr. Crow said, "You'd like another member, I dare say."</span></p>
+    <p class="pnext"><span>"Certainly!" Reddy replied. "The more the merrier—provided they wear red caps."</span></p>
+    <p class="pnext"><span>"I think," said Mr. Crow, "when you see the gentleman I have in mind you'll say he has a red cap."</span></p>
+    <p class="pnext"><span>"Bring him up!" Reddy Woodpecker ordered.</span></p>
+    <p class="pnext"><span>"I can't. He's shy," Mr. Crow explained. "But if you'll come with me you can take a look at him."</span></p>
+    <p class="pnext"><span>So Reddy Woodpecker followed Mr. Crow down to the place where the reeds grew, near the swamp. And there Mr. Crow pointed out a gentleman who did indeed appear to be wearing a red cap.</span></p>
+    <p class="pnext"><span>"Good!" exclaimed Reddy Woodpecker. And to the stranger he called, "I don't know you. But I invite you, sir, to join The Redcaps."</span></p>
+    <p class="pnext"><span>The stranger answered in a muffled voice, "I accept."</span></p>
+    <p class="pnext"><span>Then Reddy took another—and closer—look at him. Reddy couldn't help feeling there was something queer about the fellow. Half hidden as he was among the reeds the stranger was not easy to see.</span></p>
+    <p class="pnext"><span>Suddenly Reddy Woodpecker turned upon Mr. Crow and called him a fraud.</span></p>
+    <p class="pnext"><span>"This person hasn't a red cap," Reddy declared. "I won't have him in my club. I know him now. He's hiding his head under his wing. That patch of scarlet isn't on his head. It's on his shoulder. He's one of that Red-winged Blackbird family that lives in the swamp. And his head is as black as your own, Mr. Crow."</span></p>
+    <p class="pnext"><span>By this time Mr. Crow was dancing up and down and</span> <em class="italics">cawing</em> <span>at the top of his lungs.</span></p>
+    <p class="pnext"><span>"He's a member of The Redcaps!" he cried with great glee. "You invited him. And he accepted the invitation."</span></p>
+    <p class="pnext"><span>"Very well!" said Reddy Woodpecker. "But if he belongs to my club he'll have to keep his head under his wing."</span></p>
+    <p class="pnext"><span>"Then I resign!" cried the Red-winged Blackbird.</span></p>
+    <p class="pnext"><span>"Oh, don't do that!" Mr. Crow begged him.</span></p>
+    <p class="pnext"><span>"It's too late," Reddy told the old gentleman. "Your friend is a member of The Redcaps no longer."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="a-hunting-party"><span class="bold large">XVII</span></p>
+    <p class="center pnext"><span class="bold large">A HUNTING PARTY</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Cuffy Bear was one of those lucky people that eat almost everything. He liked blueberries and he liked honey; he liked maple sugar and he liked baked beans. When he was eating he never complained about his food if only there was enough. Whatever he had, he wanted a plenty of it.</span></p>
+    <p class="pnext"><span>He was wandering through the woods one day when he heard a</span> <em class="italics">tap, tap, tapping</em> <span>a little way off. He stopped and listened and sniffed. And then he said, "Woof! It isn't a man. Unless I'm mistaken it's a Woodpecker."</span></p>
+    <p class="pnext"><span>Cuffy Bear turned aside and plunged through the hushes until he came into a little clearing. There, working away upon a dead tree, was Reddy Woodpecker. One couldn't help seeing his bright red cap.</span></p>
+    <p class="pnext"><span>"I say," Cuffy Bear called to him, "let's go hunting!"</span></p>
+    <p class="pnext"><span>Reddy looked around at Cuffy Bear.</span></p>
+    <p class="pnext"><span>"Hunting!" he echoed. "What sort of hunting?"</span></p>
+    <p class="pnext"><span>"Let's go hunting for grubs!" said Cuffy Bear. "I'm very fond of grubs. And I know you are, too."</span></p>
+    <p class="pnext"><span>Now, Reddy Woodpecker never had dreamed that Cuffy Bear would ever invite so small a person as he was to go hunting with him. So it was only to be expected that Reddy should be pleased and even somewhat flattered.</span></p>
+    <p class="pnext"><span>"All right!" he agreed. "When you're ready, say the word."</span></p>
+    <p class="pnext"><span>"There's no time like the present," Cuffy declared. And he went on to explain how they could help each other. "You can scout around for old stumps and fallen trees. And when you find one with plenty of grubs, come right back here at once and lead me to it. I'll tear it open so we can get more grubs in a minute than you can reach in a day by drilling for them one at a time with your bill. I'll show you how to gather grubs in quantities. You'll always want to hunt with me, after you see the way I find 'em."</span></p>
+    <p class="pnext"><span>Reddy Woodpecker nodded his head to show that he understood. Then he started to fly away. But Cuffy Bear called him back.</span></p>
+    <p class="pnext"><span>"One thing more!" he said. "Promise me that when you find a likely tree or stump you won't stop to eat any grubs. You mustn't eat any until I come. It wouldn't be fair."</span></p>
+    <p class="pnext"><span>Reddy Woodpecker promised. Cuffy Bear waved a paw at him to hurry him on his way. And off Reddy flew. He was back again in a few minutes. "I've found one," he said. "Follow me!"</span></p>
+    <p class="pnext"><span>"All right!" Cuffy Bear squealed. He went lumbering through the woods, trying to keep Reddy Woodpecker in sight. In a few moments he gave a frantic roar. "Come back!" he thundered.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker returned.</span></p>
+    <p class="pnext"><span>"Don't fly so fast," Cuffy ordered. "I can't keep up with you. Fly slowly!"</span></p>
+    <p class="pnext"><span>"I can't fly slowly," Reddy retorted. "I don't know how."</span></p>
+    <p class="pnext"><span>"Then go a little way and sit down on a tree and wait for me," Cuffy directed. "But don't go out of my sight!"</span></p>
+    <p class="pnext"><span>Reddy Woodpecker did exactly as he was told. And in that manner they soon came to an old stump which was half crumbled away. "Ah!" cried Cuffy Bear. "This looks like a good one.... I'll show you how to get the grubs." With a few sweeps of his great paws he quickly tore the old stump to pieces.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker gasped at the huge number of lovely fat grubs that Cuffy had uncovered. He gasped again when he saw how fast Cuffy Bear ate them. They were gone in no time.</span></p>
+    <p class="pnext"><span>Licking his chops, Cuffy Bear stepped back and said, "That's the way to do it."</span></p>
+    <p class="pnext"><span>Reddy alighted on what was left of the old stump. He looked at it closely. And at last he actually found one grub that Cuffy Bear hadn't noticed. This Reddy ate, making a wry face.</span></p>
+    <p class="pnext"><span>"What's the matter?" Cuffy Bear inquired. "Isn't it good?"</span></p>
+    <p class="pnext"><span>"It's good enough—what there is of it," Reddy Woodpecker replied.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="a-big-appetite"><span class="bold large">XVIII</span></p>
+    <p class="center pnext"><span class="bold large">A BIG APPETITE</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>"Come, now!" cried Cuffy Bear to Reddy Woodpecker. "We've only begun our hunt. Hurry and find another old, grubby stump!"</span></p>
+    <p class="pnext"><span>Having eaten only one grub, while Cuffy Bear had bolted dozens, Reddy Woodpecker was not feeling very happy. However, he went flying off to search the woods. And it wasn't long before he discovered another stump that looked even more promising than the first one.</span></p>
+    <p class="pnext"><span>Then—well! Reddy must have forgotten his promise that he wouldn't stop to eat a single grub, but would fly straight back to the spot where he had left Cuffy Bear. He clung to the side of the stump with his odd feet, which were made expressly for work of that sort. And he began to drill a hole with his bill. He was sure there was a grub lurking just beneath the brittle bark.</span></p>
+    <p class="pnext"><em class="italics">Tap, tap, tap</em><span>! sounded his bill against the stump.</span> <em class="italics">Tap, tap, tap</em><span>!</span></p>
+    <p class="pnext"><span>Before Reddy reached the grub he heard a great crash in the bushes. He knew at once that Cuffy Bear had heard the sound of his drilling and had come hurrying after him. "I heard you signaling to me," Cuffy grunted.</span></p>
+    <p class="pnext"><span>He tore that stump open in a twinkling. Reddy Woodpecker had to stand aside and look on while Cuffy Bear devoured every grub in sight. When at last Cuffy drew back and allowed him to search the ruin Reddy couldn't find even one grub. "Come on!" Cuffy urged him. "Let's get on with our hunting!"</span></p>
+    <p class="pnext"><span>But this time Reddy hung back.</span></p>
+    <p class="pnext"><span>"What! Haven't you had enough grubs?" he asked none too pleasantly.</span></p>
+    <p class="pnext"><span>"Enough!" Cuffy repeated. "Why, I'm only beginning to feel hungry. These few grubs that I've eaten have just stirred up my appetite."'</span></p>
+    <p class="pnext"><span>Reddy Woodpecker was astonished.</span></p>
+    <p class="pnext"><span>"Well, if you're hungry, what do you think of me?" he wanted to know.</span></p>
+    <p class="pnext"><span>And now Cuffy Bear was amazed.</span></p>
+    <p class="pnext"><span>"You!" he cried. "Haven't you had a good meal? Didn't you eat a grub off that first stump we found?"</span></p>
+    <p class="pnext"><span>"One grub!" Reddy Woodpecker exclaimed scornfully. "What's one grub?"</span></p>
+    <p class="pnext"><span>"I should think," Cuffy Bear answered, "one grub was a good meal for anybody of your size."</span></p>
+    <p class="pnext"><span>"It's not," Reddy declared. He looked very sullen and glum.</span></p>
+    <p class="pnext"><span>Cuffy Bear was sure that Reddy was mistaken. He even tried to show Reddy that he was wrong.</span></p>
+    <p class="pnext"><span>"</span><em class="italics">One</em> <span>ought to be a big meal for you," he insisted. "Why, last week I went out for my supper one night and I ate only</span> <em class="italics">one</em><span>. And it was all I wanted."</span></p>
+    <p class="pnext"><span>"Then you had already had a big dinner," said Reddy Woodpecker.</span></p>
+    <p class="pnext"><span>"I hadn't had any dinner at all!"</span></p>
+    <p class="pnext"><span>Reddy Woodpecker stared at him. He couldn't believe it. There must be something queer about that story, somewhere. At last he asked Cuffy a blunt question.</span></p>
+    <p class="pnext"><span>"You say you ate one," he observed. "One what?"</span></p>
+    <p class="pnext"><span>"Let me see," said Cuffy Bear. "Let me think a moment.... Oh, yes! Now I remember. It was one pig!"</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="who-was-greedy"><span class="bold large">XIX</span></p>
+    <p class="center pnext"><span class="bold large">WHO WAS GREEDY?</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Reddy Woodpecker was very angry with Cuffy Bear. He thought that when they hunted grubs together it was only fair that they should divide the game. So far Cuffy had taken all but one. And that was one that he had overlooked.</span></p>
+    <p class="pnext"><span>"I don't believe I'll hunt with you any more," Reddy Woodpecker told Cuffy.</span></p>
+    <p class="pnext"><span>That news surprised Cuffy Bear. "Why, what's the matter?" he inquired. "Haven't we had good luck?"</span></p>
+    <p class="pnext"><span>Reddy Woodpecker sniffed.</span></p>
+    <p class="pnext"><span>"</span><em class="italics">You</em> <span>have had fine luck," he replied. "But</span> <em class="italics">I</em> <span>certainly haven't. When you asked me to hunt grubs with you I expected we would divide the grubs."</span></p>
+    <p class="pnext"><span>Cuffy Bear shook his head doubtfully.</span></p>
+    <p class="pnext"><span>"It's not easy to divide a grub," he said. "That's why I let you have all of that one that you found a while ago."</span></p>
+    <p class="pnext"><span>"You don't understand me," Reddy went on. "What I mean is this: If we find two dozen grubs in a stump you should have one dozen and I should have one dozen."</span></p>
+    <p class="pnext"><span>"I've never hunted in that way before," Cuffy told him. "But since you insist, I'm willing to try it. And maybe it would be only fair if I found the next stump and let you open it."</span></p>
+    <p class="pnext"><span>Now, this was a much better offer than Reddy Woodpecker had expected, so he made haste to accept it.</span></p>
+    <p class="pnext"><span>Then Cuffy Bear went wandering away into the woods. He was gone a long time. But at last he came back and said gruffly, "Follow me!"</span></p>
+    <p class="pnext"><span>They reached, after a while, a spot where Cuffy Bear stopped and pointed a paw towards an old stump.</span></p>
+    <p class="pnext"><span>"There it is," he said. "Now you tear it open."</span></p>
+    <p class="pnext"><span>Reddy Woodpecker alighted upon the stump and clung to it while he drilled into it with his bill,</span> <em class="italics">tap, tap, tap</em><span>!</span></p>
+    <p class="pnext"><span>Meanwhile Cuffy Bear watched him impatiently.</span></p>
+    <p class="pnext"><span>"My goodness!" he muttered. "That fellow is slow. I'll never get another grub if I wait for him."</span></p>
+    <p class="pnext"><span>At last, however, Reddy pulled out a grub and ate it.</span></p>
+    <p class="pnext"><span>"My turn next!" growled Cuffy Bear as Reddy Woodpecker promptly went after another.</span></p>
+    <p class="pnext"><span>Well, very soon Reddy thrust his tongue into another hole that he drilled and drew out another grub.</span></p>
+    <p class="pnext"><span>"That's mine!" cried Cuffy Bear.</span></p>
+    <p class="pnext"><span>Reddy Woodpecker tried to let it fall upon the ground. He did not find it easy to drop the grub. His horny tongue had pierced it. And in trying to let go of it he had a mishap. He swallowed the grub.</span></p>
+    <p class="pnext"><span>When Cuffy Bear saw what had happened he let out a frightful roar.</span></p>
+    <p class="pnext"><span>"That was an accident," Reddy explained over his shoulder.</span></p>
+    <p class="pnext"><span>To Cuffy Bear's dismay the same accident happened over and over again. Finally Cuffy couldn't wait another moment. With a terrible growl he rushed up to the stump, while Reddy Woodpecker slipped out of his way just in time. In another instant Cuffy had split the old stump wide open and had his head buried in it.</span></p>
+    <p class="pnext"><span>"Here!" cried Reddy Woodpecker. "How many grubs do you want?"</span></p>
+    <p class="pnext"><span>"Only about a hundred dozen!" Cuffy Bear mumbled.</span></p>
+    <p class="pnext"><span>When he heard that, Reddy Woodpecker shrieked.</span></p>
+    <p class="pnext"><span>"One hundred dozen would feed my whole family," he declared. "I shall never hunt grubs with you again."</span></p>
+    <p class="pnext"><span>"That's a pity," said Cuffy Bear. "But won't you join me to-night? I'm going after different game."</span></p>
+    <p class="pnext"><span>"What's that?" Reddy asked him.</span></p>
+    <p class="pnext"><span>"Pigs!" Cuffy replied.</span></p>
+    <p class="pnext"><span>He couldn't understand why Reddy Woodpecker went off without saying another word.</span></p>
+    <p class="pnext"><span>"He's a queer one," Cuffy muttered. "I don't care if he doesn't hunt with me. He's too greedy."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="catching-flies"><span class="bold large">XX</span></p>
+    <p class="center pnext"><span class="bold large">CATCHING FLIES</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>After his children were grown up Reddy Woodpecker had plenty of time to wander about and see all the sights in Pleasant Valley. He had often heard that one of the most curious sights was an odd person known as Ferdinand Frog. So one day Reddy flew down to Black Creek, where this nimble gentleman lived.</span></p>
+    <p class="pnext"><span>Unseen by Mr. Frog, Reddy Woodpecker clung to an old stump that leaned over the water, as if it wanted to enjoy a swim but didn't quite dare take the first plunge. Keeping most of himself hidden, Reddy peeped around the stump and watched Ferdinand Frog as he sat on a flat rock near the bank and caught flies.</span></p>
+    <p class="pnext"><span>Mr. Frog was an expert at that sport. Whenever a fly ventured near enough to him his long tongue darted out of his wide mouth so quickly you could hardly see it. And it darted back again just as fast, bearing the fly upon the end of it.</span></p>
+    <p class="pnext"><span>"I don't see how he spears 'em like that," thought Reddy Woodpecker, "with nothing but air behind them." Mr. Frog's knack was so unusual that at last Reddy Woodpecker couldn't keep silent any longer.</span></p>
+    <p class="pnext"><span>So he called to Mr. Frog, "How do you do——"</span></p>
+    <p class="pnext"><span>"I'm very well, thank you!" cried Ferdinand Frog instantly. "How are you?"</span></p>
+    <p class="pnext"><span>Reddy Woodpecker had to explain that Mr. Frog hadn't understood him.</span></p>
+    <p class="pnext"><span>"What I was going to ask you," he said, "was not 'How do you do?' It was 'How do you do that?'"</span></p>
+    <p class="pnext"><span>"That what?" Ferdinand Frog inquired.</span></p>
+    <p class="pnext"><span>"How do you spear flies with your tongue when they're in the air?" Reddy Woodpecker asked. "I can spear grubs and things with my tongue when they're on a tree. And I can catch flies in my mouth when I'm flying. But I've never learned your trick."</span></p>
+    <p class="pnext"><span>"I don't spear flies," said Mr. Frog.</span></p>
+    <p class="pnext"><span>Of course Reddy Woodpecker thought that Mr. Frog had told a</span> <em class="italics">whopper</em><span>. Hadn't he been watching him?</span></p>
+    <p class="pnext"><span>"I don't spear flies with my tongue," Ferdinand Frog went on. "My tongue is sticky. When it touches a fly, he's caught. It's very simple."</span></p>
+    <p class="pnext"><span>"That's an elegant way to catch 'em," Reddy remarked.</span></p>
+    <p class="pnext"><span>"Yes," said Mr. Frog; "and that's an elegant suit you're wearing. Would you mind if I copied it? You know, I'm the well known tailor of Pleasant Valley. And I'm always on the lookout for something different. Your clothes are different from any I've ever seen before. I dare say they'll become quite fashionable in about ten years."</span></p>
+    <p class="pnext"><span>Well, Reddy Woodpecker didn't know whether to be angry or pleased. He had heard that Mr. Frog was queer. But he hadn't supposed Mr. Frog could be as queer as he seemed.</span></p>
+    <p class="pnext"><span>"You may copy my suit if you wish," Reddy blurted at last.</span></p>
+    <p class="pnext"><span>"Good!" the tailor exclaimed. "Come with me to my shop and I'll make some notes."</span></p>
+    <p class="pnext"><span>This was more than Reddy Woodpecker cared to do. "I won't!" he said flatly.</span></p>
+    <p class="pnext"><span>"Tut! Tut!" cried Mr. Frog. "You promised I might copy your suit. You mustn't break your promise."</span></p>
+    <p class="pnext"><span>"I'm not going inside any shop," Reddy declared very firmly.</span></p>
+    <p class="pnext"><span>"Of course not!" said Mr. Frog. "I'll go inside.</span> <em class="italics">You</em> <span>can stay outside. And I'll look you over through the doorway and jot down what I need."</span></p>
+    <p class="pnext"><span>"All right!" said Reddy Woodpecker.</span></p>
+    <p class="pnext"><span>So Mr. Frog leaped ashore and gayly led the way to his shop near-by.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-odd-mr-frog"><span class="bold large">XXI</span></p>
+    <p class="center pnext"><span class="bold large">THE ODD MR. FROG</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Reddy Woodpecker stood on the doorstep of Mr. Frog's shop. And inside the tiny building Mr. Frog the tailor squatted cross-legged and scratched upon a flat stone. Now and then he glanced up to look closely at Reddy Woodpecker.</span></p>
+    <p class="pnext"><span>"Colors: red, white and—yes! blue!" Mr. Frog murmured, blinking his bulging eyes at Reddy Woodpecker. "It's a little too blackish for my taste, but it's certainly blue.... A good suit for the Fourth of July!" he muttered. "Just the thing for a clown to wear in a parade of Horribles!"</span></p>
+    <p class="pnext"><span>Mr. Frog's remarks did not please Reddy Woodpecker. In fact they made him very angry. But Mr. Frog didn't appear to notice that. He went right on talking to himself.</span></p>
+    <p class="pnext"><span>"Red head and black tail!" he said, scratching upon his stone all the while. "Black head and red tail would be much better."</span></p>
+    <p class="pnext"><span>"I didn't come here to be abused!" Reddy Woodpecker spluttered.</span></p>
+    <p class="pnext"><span>The tailor paid no heed to Reddy's protest.</span></p>
+    <p class="pnext"><span>"Too much stiffening in the tail!" Mr. Frog mumbled. "Colors too gay for everyday wear! Too loud for the best taste!"</span></p>
+    <p class="pnext"><span>By this time Reddy Woodpecker had become so furious that he couldn't speak.</span></p>
+    <p class="pnext"><span>Meanwhile Mr. Frog continued to look him over calmly, and as his gaze fell at last upon Reddy's feet he began to titter.</span></p>
+    <p class="pnext"><span>"This person's feet are all wrong," he chanted, scratching like mad upon his flat stone. "Never saw a bird before with toes like his. The rule for birds is: three toes in front, one toe in back. This person has two in front and two in back. I</span> <em class="italics">thought</em> <span>there was something queer about him."</span></p>
+    <p class="pnext"><span>"Look here!" Reddy Woodpecker burst forth. "I won't stay here any longer. You're making fun of me. I don't care if I did promise. If my clothes are so queer why do you want to copy them?"</span></p>
+    <p class="pnext"><span>"I don't</span> <em class="italics">want</em> <span>to copy them," Mr. Frog replied. "I'd</span> <em class="italics">hate</em> <span>to copy them."</span></p>
+    <p class="pnext"><span>"Then why did you ask me to stand here in front of your shop while you wrote down all this nonsense?"</span></p>
+    <p class="pnext"><span>"You're mistaken," Mr. Frog told him. "I haven't written a word. I asked you to come here because you look like a customer. It's good business to have customers seen about my shop. I haven't had a</span> <em class="italics">real</em> <span>customer this season," he added somewhat sadly. "So you can't blame me if I want people to think I have one at last—now can you?"</span></p>
+    <p class="pnext"><span>Reddy Woodpecker had no patience with him.</span></p>
+    <p class="pnext"><span>"I think you're nothing but a fraud," he declared. "I don't believe you're a tailor at all."</span></p>
+    <p class="pnext"><span>"Dear me!" said Mr. Frog. "Maybe I'm not. Sometimes I've wondered if I wasn't fooling myself."</span></p>
+    <p class="pnext"><span>"You'd better stick to catching flies," Reddy advised him. "That's all you're good for."</span></p>
+    <p class="pnext"><span>"Perhaps you're right," Mr. Frog replied. He seemed quite meek and mournful. But all at once he smiled. "Anyhow," he remarked, "it's lucky that the flies stick to me—now isn't it?"</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="dodging-danger"><span class="bold large">XXII</span></p>
+    <p class="center pnext"><span class="bold large">DODGING DANGER</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Soon after Reddy Woodpecker settled in Farmer Green's orchard he noticed that a certain person often followed him. The stranger wore gray fur and always flourished a long, bushy tail behind him. He could climb trees as well as Reddy Woodpecker himself. And though he couldn't fly, he was very skillful at leaping from one tree top into another.</span></p>
+    <p class="pnext"><span>Whenever Reddy Woodpecker happened to turn around and spy this lurking stranger the fellow acted as if he hadn't seen Reddy Woodpecker. He would pretend to whisk a bit of bark off the tip of his tail, or arrange his mustache. But the moment Reddy turned his back upon him the stranger would creep a little nearer.</span></p>
+    <p class="pnext"><span>At last this sly person made a quick dash at Reddy Woodpecker one day. He discovered, then, that Reddy was both wide-awake and spry. For Reddy slipped off the tree trunk where he had been clinging and easily escaped the greedy clutches of the stranger.</span></p>
+    <p class="pnext"><span>It's no wonder that Reddy was angry. No one would care to have his breakfast interrupted in such a fashion.</span></p>
+    <p class="pnext"><span>"I knew that sneak meant to catch me if he could," Reddy muttered to himself as he went on with his breakfast.</span></p>
+    <p class="pnext"><span>A few moments later his cousin Mr. Flicker settled upon an ant hill below him.</span></p>
+    <p class="pnext"><span>"Who is that stranger?" Reddy Woodpecker asked Mr. Flicker.</span></p>
+    <p class="pnext"><span>Mr. Flicker glanced at the sly person who was just dodging behind a limb.</span></p>
+    <p class="pnext"><span>"He's no stranger," said Mr. Flicker. "He has lived here a good deal longer than you have. That's Frisky Squirrel."</span></p>
+    <p class="pnext"><span>"Well, he's a little too frisky," Reddy Woodpecker scolded. "He just jumped at me. He has been trying to catch me ever since I came to the farm."</span></p>
+    <p class="pnext"><span>Mr. Flicker laughed.</span></p>
+    <p class="pnext"><span>"That's a regular trick of his," he remarked. "He's always jumping off a fence post at me. But I have no trouble dodging him."</span></p>
+    <p class="pnext"><span>"I don't see why he wants to catch me," Reddy grumbled. "He can't know—yet—that I'm fond of nuts. But in the fall, when the nuts are ripe, I expect I'll make him almost crazy."</span></p>
+    <p class="pnext"><span>The next time Reddy met his tormentor he called to him as pleasantly as if there'd never been any trouble between them.</span></p>
+    <p class="pnext"><span>"How's this place for nuts?"</span></p>
+    <p class="pnext"><span>"Fine!" cried Frisky Squirrel. "The woods beyond the meadow are famous for their beechnuts."</span></p>
+    <p class="pnext"><span>"That's good news," said Reddy. "I'm glad I settled here."'</span></p>
+    <p class="pnext"><span>Frisky gave him a sharp look. "You don't like beechnuts, do you?" he asked.</span></p>
+    <p class="pnext"><span>"Don't I? Oh, don't I?" Reddy cried.</span></p>
+    <p class="pnext"><span>Strange to say Frisky Squirrel knew the answer to that question.</span></p>
+    <p class="pnext"><span>"Oh! You</span> <em class="italics">do</em> <span>like them!" he chattered. "Well, maybe there aren't as many beechnuts as I thought. Maybe the beechnutting is poor here. No doubt I'm mistaken about it. Why don't you go over on the other side of Blue Mountain to live? You're</span> <em class="italics">sure</em> <span>to find plenty of beechnuts over there next fall."</span></p>
+    <p class="pnext"><span>Reddy Woodpecker laughed heartily. Frisky Squirrel could not deceive him.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="beechnuts"><span class="bold large">XXIII</span></p>
+    <p class="center pnext"><span class="bold large">BEECHNUTS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>"I'm going to stay right here on this farm," Reddy Woodpecker declared. "I like this place."</span></p>
+    <p class="pnext"><span>"Perhaps you expect to leave for the South before the beechnuts are ripe," Frisky Squirrel suggested hopefully.</span></p>
+    <p class="pnext"><span>"Not I!" replied Reddy Woodpecker. "If I leave, I shall wait until the last beechnut is eaten. And no doubt I shall not leave at all. This looks to me like a good place to spend the winter."</span></p>
+    <p class="pnext"><span>Now that Frisky Squirrel knew Reddy Woodpecker ate beechnuts he was more determined than ever to catch him. He had hunted Reddy before. Now he haunted him. He dogged Reddy Woodpecker's footsteps. He crept up behind him and jumped at him a dozen times a day.</span></p>
+    <p class="pnext"><span>Though Frisky didn't know it, he couldn't have captured Reddy Woodpecker in a thousand years. Reddy was too wary to be caught. He always chuckled after dodging. And he always called mockingly, "Not this time, young fellow!"</span></p>
+    <p class="pnext"><span>All summer long the chase went on. Frisky Squirrel seemed to think that if only he hunted Reddy long enough there would come a time when he would catch him napping.</span></p>
+    <p class="pnext"><span>Now, every year as fall drew near it was Frisky's custom to go each day to the woods, to inspect the beechnuts. He went very slyly. It was a business of great importance. Of course he didn't care to have everybody know what he was doing.</span></p>
+    <p class="pnext"><span>Imagine his annoyance, then, on his first trip to the beech grove, to hear Reddy Woodpecker call out to him, "What do you think of 'em? Will they be ready to eat soon?"</span></p>
+    <p class="pnext"><span>Reddy was high up in a beech tree. And Frisky Squirrel was so angry that he could only look up at him and chatter.</span></p>
+    <p class="pnext"><span>"You haven't answered my questions," Reddy observed presently. "Perhaps you aren't a good judge of beechnuts. Perhaps I'd better ask Jasper Jay."</span></p>
+    <p class="pnext"><span>That threat made Frisky Squirrel angrier than ever. He darted up the tree as fast as he could scramble. If he hadn't been so angry he would have known how utterly useless it was to try to catch Reddy Woodpecker when Reddy was looking right at him.</span></p>
+    <p class="pnext"><span>Reddy calmly moved to another tree. Frisky Squirrel leaped into the top of it. Again Reddy moved.</span></p>
+    <p class="pnext"><span>Then Frisky sat up on a limb and glared at him.</span></p>
+    <p class="pnext"><span>"Don't mention these nuts to Jasper Jay!" he cried. "I've been hoping he'd forget about them. Eat what you want—if you must. But for goodness' sake don't go and tell the whole neighborhood about them. Just between you and me, these nuts will be ready to eat as soon as there's a frost to sweeten them."</span></p>
+    <p class="pnext"><span>"You're very kind," Reddy Woodpecker told him. "Very kind indeed!"</span></p>
+    <p class="pnext"><span>Well, in about two weeks there was a frost. When Reddy Woodpecker awoke one morning the fields were white and a thin coating of ice covered the watering-trough in the barnyard.</span></p>
+    <p class="pnext"><span>Some of the birds in Pleasant Valley had long since left for the South. And many of those that hadn't announced that they expected to start for a milder climate that very evening.</span></p>
+    <p class="pnext"><span>The weather soon grew warmer. And on the following day Reddy Woodpecker and Frisky Squirrel met at the beech grove.</span></p>
+    <p class="pnext"><span>"These are good nuts, eh?" called Reddy.</span></p>
+    <p class="pnext"><span>"They'd taste sweeter if you weren't here," Frisky Squirrel mumbled out of a full mouth.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-winter-s-store"><span class="bold large">XXIV</span></p>
+    <p class="center pnext"><span class="bold large">THE WINTER'S STORE</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>After Frisky Squirrel had enjoyed a hearty meal of beechnuts he began to make hurried trips to a hollow tree nearby. He lived in that tree. It had a fine big storeroom. And there he carried beechnuts in his cheeks. Frisky did not intend to go hungry when winter came.</span></p>
+    <p class="pnext"><span>Meanwhile he watched Reddy Woodpecker out of the corner of his eye. He still hoped to catch Reddy unawares. And at last Frisky saw something that he hadn't expected to see. It made him stop short and stare.</span></p>
+    <p class="pnext"><span>He saw Reddy Woodpecker loosen a bit of bark and hide a beechnut under it. Soon he beheld Reddy stowing beechnuts away in a hole in an old stump.</span></p>
+    <p class="pnext"><span>Frisky Squirrel was wild with rage.</span></p>
+    <p class="pnext"><span>"I told you you might eat as many nuts as you pleased, if only you wouldn't mention beechnuts to Jasper Jay. I didn't say you might hide beechnuts. But I've caught you hoarding them!"</span></p>
+    <p class="pnext"><span>Reddy Woodpecker was not ruffled—not even a single feather.</span></p>
+    <p class="pnext"><span>"I'm putting away a few nuts," he admitted. "I expect to spend the winter here. And of course I shall need something to eat."</span></p>
+    <p class="pnext"><span>"Don't you dare hide another nut!" Frisky Squirrel scolded.</span></p>
+    <p class="pnext"><span>"You're hoarding nuts yourself!"</span></p>
+    <p class="pnext"><span>"That's different," Frisky blustered.</span></p>
+    <p class="pnext"><span>All at once a loud, harsh voice squalled right above their heads. It belonged to Jasper Jay. "A quarrel!" he bawled. "A quarrel over beechnuts! I must do what I can to stop it. I'll gather as many beechnuts as I can; because when they're all gone there won't be anything to quarrel about."</span></p>
+    <p class="pnext"><span>"Another hoarder!" chattered Frisky.</span></p>
+    <p class="pnext"><span>And Jasper Jay was not the last to appear. For Johnnie Green soon came hurrying up with a basket. And Frisky regarded him with great disfavor.</span></p>
+    <p class="pnext"><span>"Another hoarder!" Frisky groaned. And he began to scold Johnnie. "Go away!" he cried. "We don't want you here." To his great disgust Johnnie Green shied a stone at him and told him not to be saucy.</span></p>
+    <p class="pnext"><span>Jasper Jay jeered loudly at Frisky.</span></p>
+    <p class="pnext"><span>"That's what you get for being a pig," he told him. And turning to Reddy Woodpecker, Jasper added, "You see the pigs aren't all in the pigsty!"</span></p>
+    <p class="pnext"><span>Frisky Squirrel pretended that he didn't hear any of Jasper Jay's remarks. He set to work again to gather beechnuts enough to last him all winter and never once stopped to dash at Reddy Woodpecker nor even look at him.</span></p>
+    <p class="pnext"><span>That was only the first of many busy days for Reddy. Having made up his mind to spend the winter at Farmer Green's place he hid nuts everywhere.</span></p>
+    <p class="pnext"><span>No doubt he never could remember all of his hiding places. But he found enough of them when winter came. And though Frisky Squirrel had stowed away all the nuts he could possibly need, he never could bear to watch Reddy Woodpecker pull out a beechnut from beneath a strip of bark.</span></p>
+    <p class="pnext"><span>He said he never did like to see a bird eat nuts.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span>THE END</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 71%" id="figure-47">
+      <img class="align-center block" style="display: block; width: 100%" alt="Front end paper - left half" src="images/img-200f-l.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">Front end paper - left half</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 70%" id="figure-48">
+      <img class="align-center block" style="display: block; width: 100%" alt="Front end paper - right half" src="images/img-200f-r.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">Front end paper - right half</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 71%" id="figure-49">
+      <img class="align-center block" style="display: block; width: 100%" alt="Rear end paper - left half" src="images/img-200r-l.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">Rear end paper - left half</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 72%" id="figure-50">
+      <img class="align-center block" style="display: block; width: 100%" alt="Rear end paper - right half" src="images/img-200r-r.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">Rear end paper - right half</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><em class="bold italics large">TUCK-ME-IN TALES</em></p>
+    <p class="center pnext"><span class="small">(Trademark Registered)</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="medium">BY<br />
+    ARTHUR SCOTT BAILEY</span></p>
+    <p class="center pnext"><span class="medium">AUTHOR OF<br />
+    SLEEPY-TIME TALES<br />
+    (Trademark Registered)</span></p>
+    <p class="noindent pnext"><span>The Tale of Jolly Robin<br />
+    The Tale of Old Mr. Crow<br />
+    The Tale of Solomon Owl<br />
+    The Tale of Jasper Jay<br />
+    The Tale of Rusty Wren<br />
+    The Tale of Daddy Longlegs<br />
+    The Tale of Kiddie Katydid<br />
+    The Tale of Buster Bumblebee<br />
+    The Tale of Freddie Firefly<br />
+    The Tale of Betsy Butterfly<br />
+    The Tale of Bobby Bobolink<br />
+    The Tale of Chirpy Cricket<br />
+    The Tale of Mrs. Ladybug<br />
+    The Tale of Reddy Woodpecker<br />
+    The Tale of Grandmother Goose</span></p>
+    <div class="vspace" style="height: 6em"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="backmatter"></div>
+    <div class="cleardoublepage"></div>
+  </div>
+</body>
+</html>
